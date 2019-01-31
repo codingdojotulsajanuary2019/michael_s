@@ -1,0 +1,16 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    outline: 1px solid black;
+}
+
+.container {
+    background-color: black;
+}
+
+img {
+    width: 20%;
+    height: 250px;
+    margin: 30px;
+    display: inline-block;
+}
