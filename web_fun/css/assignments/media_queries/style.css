@@ -1,0 +1,76 @@
+/* outline */
+
+* {
+    outline: 1px solid red; 
+    margin: 0px auto;
+    padding: 0px auto;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.container {
+    width: 100% auto;
+    height:100% auto;
+}
+
+h1 {
+    width: 90%;
+    height: auto;
+    background-color: aqua;
+}
+
+p {
+    width: 90%;
+    height: auto;
+    background-color: aquamarine;
+}
+
+/* Phone */
+@media only screen and (max-width: 480px) {
+    .sm-screen {
+        width: 90%;
+        display: inline-block;
+        background-color: red;
+    }
+
+    .mdm-screen {
+        display: none;
+    }
+
+    .lrg-screen {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 481px) {
+    .sm-screen {
+        display: none;
+    }
+
+    .mdm-screen {
+        width: 90%;
+        display: inline-block;
+        background-color: yellow;
+    }
+
+    .lrg-screen {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .sm-screen {
+        display: none;
+    }
+
+    .mdm-screen {
+        display: none;
+    }
+
+    .lrg-screen {
+        width: 90%;
+        display: inline-block;
+        background-color: green;
+    }
+}

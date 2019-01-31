@@ -1,0 +1,179 @@
+/*CSS reset settings here*/
+* {
+    margin: 0% auto;
+    padding: 0% auto;
+    outline: 1px solid red;
+}
+
+.wrapper {
+    width: 100% auto;
+    height: 100% auto;
+    background-color: silver;
+}
+
+.header {
+    height: 20vh;
+    width: 90%;
+    background-color: green;
+    margin: auto;
+}
+
+.navigation {
+    height: 400px;
+    width: 20%;
+    background-color: blue;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5%;
+    margin-top: 1%;
+    
+}
+
+.main_content {
+    height: 70vh;
+    width: 69%;
+    background-color: red;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 5%;
+}
+
+.subcontents {
+    height: 35vh;
+    width: 30%;
+    background-color: yellow;
+    display: inline-block;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+.advertisement {
+    min-height: 20vh;
+    width: 95%;
+    background-color: purple;
+    display: inline-block;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+/* SMALL SCREEN */
+@media only screen and (max-width: 480px) {
+    .small-screen{
+        width: 100%;
+    }
+    .small-screen .header {
+       height: 20vh;
+       width: 90%;
+       background-color: green;
+       margin: auto;
+    }
+    .small-screen .navigation{
+        display: none;
+    }
+
+    .small-screen .main_content {
+            height: 80vh;
+            width: 90%;
+            background-color: red;
+            margin-left: 5%;
+    }
+    .small-screen .subcontents {
+        width: 90%;
+        height: 15vh;
+        display: inline-block;
+        margin-left: 5%;
+    }
+    .small-screen .advertisement {
+        width: 90%;
+        height: 15vh;
+        display: inline-block;
+        margin-left: 5%;
+    }
+}
+
+/* MEDIUM SCREEN */
+@media only screen and (min-width:481px) {
+    .medium-screen {
+        width: 100%;
+    }
+        .medium-screen .header {
+            height: 20vh;
+            width: 90%;
+            background-color: green;
+            margin: auto;
+        }
+
+        .medium-screen .navigation {
+            width: 20%;
+            height: 60vh;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .medium-screen .main_content {
+            height: 120vh;
+            width: 68.5%;
+            background-color: red;
+            margin-left: 1%;
+        }
+
+        .medium-screen .subcontents {
+            width: 43%;
+            height: 45vh;
+            display: inline-block;
+            margin-left: 5%;
+        }
+
+        .medium-screen .advertisement {
+            width: 90%;
+            height: 15vh;
+            display: inline-block;
+            margin-left: 5%;
+        }
+
+}
+
+/* LARGE SCREEN */
+@media only screen and (min-width:1024px){
+    .large-screen {
+        width: 100%;
+    }
+        .large-screen .header {
+            height: 20vh;
+            width: 90%;
+            background-color: green;
+            margin: auto;
+        }
+
+        .large-screen .navigation {
+            width: 20%;
+            height: 60vh;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .large-screen .main_content {
+            height: 80vh;
+            width: 68.5%;
+            background-color: red;
+            margin-left: 1%;
+        }
+
+        .large-screen .subcontents {
+            width: 25%;
+            height: 35vh;
+            display: inline-block;
+            margin-left: 5%;
+            margin-bottom: 5%;
+        }
+
+        .large-screen .advertisement {
+            width: 87%;
+            height: 15vh;
+            display: inline-block;
+            margin-left: 5%;
+        }
+}

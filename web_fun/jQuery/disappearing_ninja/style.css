@@ -1,0 +1,29 @@
+ * {
+     margin: 0%;
+     padding: 0%;
+     background-color: black;
+ }
+
+ .container {
+     width: 100% auto;
+     height: auto;
+     display: inline-block;
+     text-align: center;
+ }
+
+ img {
+     height: 40vh;
+     width: 15em;
+     margin: 1%;
+     display: inline-block;
+     outline: 1px solid blue;
+ }
+
+ button {
+     background: whitesmoke;
+     color: blue;
+     font-size: 20px;
+     width: 20em;
+     height: 5vh;
+     display: inline-block;
+ }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Forms Practice</title>
+
+    </head>
+    <body>
+        <p>When the user needs to enter a short amount of text, such as an email address or name.</p>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name">
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <p>A password field.</p>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+
+        <p>When the user can choose only 1 option from a variety of options. A good example is a gender selector.</p>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="decline">Prefer not to say</label>
+        <input type="radio" id="decline" name="gender" value="decline">
+
+        <p>Another option is a dropdown menu, which uses select and option tags.</p>
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="decline">Prefer not to say</option>
+        </select>
+
+        <p>When the user can choose multiple things from a variety of options, such as choosing their favorite 3 colors from 5 options.</p>
+        <label for="blue">Blue</label>
+        <input type="checkbox" id="blue" name="color" value="blue">
+        <label for="green">Green</label>
+        <input type="checkbox" id="green" name="color" value="green">
+        <label for="red">Red</label>
+        <input type="checkbox" id="red" name="color" value="red">
+        <label for="black">Black</label>
+        <input type="checkbox" id="black" name="color" value="black">
+        <label for="purple">Purple</label>
+        <input type="checkbox" id="purple" name="color" value="purple">
+
+        <p>When the user might want to enter longer text. This can be used in forums for comments, or for user profile descriptions.</p>
+        <textarea name="description"></textarea>
+
+        <p>When a form needs to submit more than just user input. </p>
+        <!-- Input type hidden is similar to text fields, except they do not show on the page and users can not enter anything into
+        them. This is useful for the back-end authentication and passing data. -->
+        <p>Input type hidden is similar to text fields, except they do not show on the page and users can not enter anything
+        into them. This is useful for the back-end authentication and passing data. 
+        </p>
+        <input type="hidden" name="id" value="7">
+
+        <p>Finally, to create a submit button:</p>
+        <input type="submit" value="Submit">
+
+    </body>
+</html>

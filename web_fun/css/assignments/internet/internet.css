@@ -1,0 +1,355 @@
+/* puts a border around each container */
+/* *{
+    border: 1px solid green;
+    margin: 0px;
+} */
+
+/* MAIN CONTAINER */
+
+.container {
+    background-color: #ffffff;
+    height: 1500px;
+    min-height: 500px;
+    width: 100%;
+    margin: 0px;
+
+}
+
+/* HEADER */
+
+.header {
+    height: 150px;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+    .header img {
+        height: 100px;
+        width: 100px;
+        margin-top: 10px;
+        margin-left: 10px; 
+        display: inline-block;
+        position: relative;
+    }
+
+    .header h1 {
+        /* width: ; */
+        font-size: 50px;
+        padding: 0px;
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        margin-top: 30px;
+
+    }
+
+    .header span {
+        color:#3251ff;
+    }
+
+    .header h2 {
+        color: whitesmoke;
+        background-image: radial-gradient(#bababe, #0314fa);
+        width: 100%;
+        font-size: 30px;
+        padding: 20px 0px 10px 0px;
+        margin: -25px 0px 0px 0px;
+        display: inline-block;
+        vertical-align: bottom;
+        
+    }
+
+/* LEFT COLUMN */
+
+.leftcolumn {
+    height: auto;
+    min-height: 400px;
+    width: 300px;
+    display: inline-block;
+    position: relative;
+}
+
+    .leftcolumn h3 {
+        margin-top: 20px;
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    .leftcolumn h3 span {
+        color: red;
+    }
+
+    .leftcolumn h4 {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+
+    }
+
+    .leftcolumn h4 span {
+        color: #3251ff;
+    }
+
+    .leftcolumn button.blue{
+        width: 250px;
+        height: 40px;;
+        background-color: #0314fa;
+        color: whitesmoke;
+        font-size: 16px;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px black;
+        
+    }
+
+    .leftcolumn button.orange  {
+        width: 250px;
+        height: 40px;
+        background-color: #dd8006;
+        color: whitesmoke;
+        font-size: 16px;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px black;
+            
+
+    }
+
+    .leftcolumn button a {
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .leftcolumn span.linedecoration {
+        height: 1px;
+        width: 250px;
+        margin-left: 20px;
+        background-color: #0314fa;
+        opacity: .6;
+        display: inline-block;
+        position: relative;
+
+    }
+
+/* LEFTSIDE AD */
+
+    .leftcolumn div.ad {
+        color: whitesmoke;
+        font-size: 24px;
+        text-align: center;
+        height: 300px;
+        width: 220px;
+        margin-left: 20px;
+        margin-top: 20px;
+        padding: 20px 20px;
+        display: inline-block;
+        position: relative;
+        background-image: url("images/ad_background.png");
+        background-size: cover;
+
+    }
+
+        .leftcolumn h3.adtxt {
+            color: whitesmoke;
+            font-size: 24px;
+            text-align: center;
+            height: 75px;
+            width: 220px;
+            margin: 0px;
+            padding: 0px 0px; 
+            display: inline-block;
+            position: relative;
+        }
+
+        .leftcolumn img.ninjaimg {
+            height: 175px;
+            width: 175px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .leftcolumn button.adbutton {
+            background-image: linear-gradient(#0099ff, #54e5f0);
+            color: whitesmoke;
+            font-size: 20px;
+            height: 30px;
+            width: 220px;
+            display: inline-block;
+            position: relative;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .leftcolumn span.dark {
+            color: #ffffff5d;
+            font-size: 18px;
+
+        }
+
+        .leftcolumn span.medium {
+            color: #ffffff9c;
+            font-size: 18px;
+        }
+
+        .leftcolumn span.light {
+            color: #ffffffe3;
+            font-size: 18px;
+        }
+
+/* MAIN CONTENT OF THE PAGE */
+
+.maincontent {
+    height: 500px;
+    width: 920px;
+    margin: 20px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+    .maincontent img.smallimg {
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+    }
+
+    .maincontent h4 {
+        font-size: 20px;
+        margin: 0px;
+        color: #3251ff;
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+    }
+
+    .maincontent img.phone {
+        height: 50px;
+        width: 50px;
+        margin-left: 590px;
+        vertical-align: top;
+    }
+
+    .maincontent p {
+        font-size: 12px;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        margin-left: 20px;
+        margin-top: 0px;
+    }
+
+    .maincontent span.phonenum {
+        color: #3251ff;
+        font-size: 28px;
+    }
+
+    .maincontent span.linedecoration {
+         height: 1px;
+         width: 900px;
+         margin-top: 10px;
+         margin-bottom: 10px;
+         background-color: #0314fa;
+         opacity: .6;
+         display: inline-block;
+         position: relative;
+
+    }
+
+    /* CONTAINER STARTING AT CLIENTS & SERVERS */
+
+    .maincontent h2 {
+        color: #3251ff;
+    }
+
+    .maincontent h5 {
+        font-size: 16px;
+        font-weight: 100;
+    }
+
+    .maincontent .highlight{
+        color: #3251ff;
+
+    }
+
+    .maincontent .bold {
+        font-weight: 300;
+
+    }
+
+    .maincontent ul p {
+        text-align: left;
+        font-size: 16px;
+        margin-left: 0px;
+    }
+
+    .maincontent img.clientserver {
+        height: 150px;
+        width: 350px;
+        margin-left: 250px;
+    }
+
+/* BOTTOM CONTENT */
+
+.bottom {
+    border: 5px solid #0314fa;
+    padding: 10px;
+}
+
+    .bottom img.htmlimg {
+        height: 175px;
+        width: 200px;
+        margin-top: 20px;
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        }
+
+        .bottom h3 {
+            color: #3251ff;
+            font-size: 20px;
+            margin-top: 20px;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .bottom p {
+            font-size: 16px;
+            height: 100px;
+            width: 600px;
+            margin: 0px;
+            display: inline-block;
+            position: relative;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .bottom  p span {
+            font-style: italic;
+        }
+
+        .bottom a {
+            text-decoration: none;
+        }
+
+        .bottom .bottomright {
+            height: 200px;
+            width: 600px;
+            margin-left: 20px;
+            padding: 10px;
+            display: inline-block;
+            position: relative;
+            
+        }
