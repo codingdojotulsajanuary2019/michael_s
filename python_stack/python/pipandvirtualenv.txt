@@ -1,0 +1,47 @@
+pip install Django==1.11.9 
+
+this installs Django version 1.11.9 into my py3Env virtual enviroment
+
+
+pip list 
+
+lists all the packages installed in my py3Env virtual enviroment. 
+
+
+deactivate 
+
+this deactivates my virtual enviroment that I am in. 
+
+pip3 list 
+
+lists all my packages in my current enoviroment. Now Django is not installed. 
+
+
+source my_enviroments/py3Env/bin/activate
+
+activates my enviroment again 
+
+pip install Django==1.11.9 
+
+Django is already installed in this enviroment. 
+
+pip freeze
+
+this freezes the enviroments dependancies and produces a text file with the package versions in that enviroment. 
+
+pip freeze > requirements.txt 
+ls 
+
+this freezes all the dependancies in my enviroment and only shows me the directories on my computer. 
+
+pip uninstall Django 
+
+this uninstalls Django in my virtual enviroment. 
+
+pip show Django 
+
+does nothing because Django is not installed anymore in this enviroment. 
+
+pip search Flask shows all the available Flask packages for flask that I can install in my enviroment. 
+
+
