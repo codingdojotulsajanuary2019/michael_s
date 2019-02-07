@@ -1,0 +1,17 @@
+
+/* table {
+    border: 1px solid black;
+    text-align: center;
+    padding: 0px;
+} */
+
+table{
+        border-radius: 5px;
+        width: 50%;
+        margin: 0px auto;
+        margin-top: 0px;
+}
+
+td {
+    padding: 10px;
+}
