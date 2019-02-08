@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Survey</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        <br>
+        <br>
+        <div class="container bg-secondary col-6 rounded border border-white">
+            <div class="form-group">
+                <br>
+                <h2 class="text-center text-uppercase text-info">Form Registration</h2>
+                <br>
+                <form action="/result" method="POST">
+                    <div class="row">
+                        <label for="name" class="text-light col-3 text-center">Name: </label>
+                        <input type="text" class="form-control col-7 border border-dark" id="name" name="name" placeholder="Name">
+                    </div>
+                        <br>
+                    <div class="row">
+                        <label for="location" class="text-light col-3 text-center">Dojo Location</label>
+                        <select class="form-control form-control-md col-7 border border-dark text-muted" name="location">
+                            <option>Tulsa</option>
+                            <option>San Jose</option>
+                            <option>Silicon Valley</option>
+                            <option>Seatle</option>
+                        </select>
+                    </div>
+                        <br>
+                    <div class="row">
+                        <label for="favlang" class="text-light col-3 text-center">Dojo Location</label>
+                        <select class="form-control form-control-md col-7 border border-dark text-muted" name="favlang">
+                            <option>Python</option>
+                            <option>JavaScript</option>
+                            <option>C#</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                        <br>
+                    <div class="form-group row">
+                        <label class="text-light col-3 text-center" for="comment">Comment (Optional):</label>
+                        <textarea class="form-control col-7 broder border-dark" rows="5" id="comment" placeholder="Write Your Comments Here" name="comment"></textarea>
+                    </div>
+                        <br>
+                    <div class="row">
+                        <p class="text-white">Gender: </p>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="gender_result">Male</label>
+                            <input class="form-check-input" type="radio" name="gender_result" id="male" value="Male">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="gender_result">Female</label>
+                            <input class="form-check-input" type="radio" name="gender_result" id="female" value="Female">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="gender_result">Other</label>
+                            <input class="form-check-input" type="radio" name="gender_result" id="other" value="Other">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="text-white"> Pizaa Toppings </p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="topping" id="cheese" value="Cheese">
+                            <label class="form-check-label" for="inlineCheckbox1">Cheese</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="topping" id="pepperoni" value="Pepperoni">
+                            <label class="form-check-label" for="inlineCheckbox2">Pepperoni</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="topping" id="sausage" value="Sausage">
+                            <label class="form-check-label" for="inlineCheckbox3">Sausage</label>
+                        </div>
+                    </div>
+ 
+                    <div class="row offset-6">
+                        <button class="btn btn-dark border border-white col-8" type="submit">Submit</button>
+                    </div>
+                </form>
+                <br>
+            </div>
+        
+        </div>
+        <br>
+        <br>
+
+    </div>
+    
+</body>
+</html>
