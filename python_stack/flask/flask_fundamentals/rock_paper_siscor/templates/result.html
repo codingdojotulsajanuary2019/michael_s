@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body> 
+    <div class="container-fluid bg-info">
+        <br><br><br><br><br><br><br><br><br><br>
+      
+
+        <div class="container bg-secondary col-8 text-white text-center rounded border border-dark shadow-lg p-3 mb-5 rounded">
+            <h2>You Chose: {{ session['choice'] }}</h2>
+            <h2>The Computer Picked: {{ session['comp_choice'] }}</h2>
+            <h1>Result: {{ session['result'] }}</h1>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>==≠
+
+
+    </div>
+
+    
+</body>
+</html>

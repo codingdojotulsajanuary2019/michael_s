@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Sicors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        <div class="container">
+            <br><br><br><br>
+            <img src="{{ url_for('static', filename='img/rock.png') }}" alt="Rock" class="ml-4">
+            <img src="{{ url_for('static', filename='img/paper.png') }}" alt="Paper" class="ml-4">
+            <img src="{{ url_for('static', filename='img/scissors.png') }}" alt="Scissors" class="ml-4">
+        </div>
+        <br><br><br><br>
+        <div class="container col-4">
+            <form action="/game" method="POST">
+                <select class="form-control text-center" name="choice">
+                    <option value="Rock">Rock</option>
+                    <option value="Paper">Paper</option>
+                    <option value="Scissors">Siscors</option>
+                </select>
+                <br>
+                <input class="btn btn-primary col-8 offset-2" type="submit" value="Submit">
+                <br><br><br><br>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
