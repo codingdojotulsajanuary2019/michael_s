@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Great Number Game</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container col-8 bg-primary">
+
+            <h2 class="text-center text-white">Welcome to the Great Number Game</h2>
+            <p class="text-center text-white">
+                I am thinking of a number between 1 and 100
+            </p>
+            <p class=" text-center text-white">Take a guess!</p>
+            <div class="container col-4 bg-secondary text-center">
+
+            </div>
+            <form action="/user_guess" method="post">
+
+                <div class="form-group">
+                    <label for="user_guess"></label>
+                    <input type="text" class="form-control col-4 offset-4 text-center border border-dark" name="user_guess" id="user_guess" placeholder="Guess a number 1-100">
+                </div>
+                <button type="submit" class="btn btn-info col-2 offset-5 border border-white">Submit</button>
+        </div>
+
+    </div>
+    
+</body>
+</html>
