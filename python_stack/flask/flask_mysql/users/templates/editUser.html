@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit User</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+
+</head>
+<body class="bg-info">
+    <div class="jumbotron col-8 container mt-4 bg-dark text-white border border-white">
+        <h1 class="display-4 text-center">Edit User {{ display_info[0]['id']  }} Info</h1>
+
+        <div class="container col-8">
+            <form action="/user/{{  display_info[0]['id'] }}/update" method="POST">
+                <div class="form-group">
+                    <label for="update_last_name">First_Name</label>
+                    <input type="text" class="form-control" id="update_last_name" aria-describedby="update_last_name" placeholder="{{ display_info[0]['first_name'] }}" name="update_first_name">
+                </div>
+                <div class="form-group">
+                    <label for="update_last_name">Last Name</label>
+                    <input type="text" class="form-control" id="update_last_name" placeholder="{{ display_info[0]['last_name'] }}" name="update_last_name">
+                </div>
+                <div class="form-group">
+                    <label for="update_email">Email</label>
+                    <input type="email" class="form-control" id="update_email" placeholder="{{ display_info[0]['email'] }}" name="update_email">
+                </div>
+            
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+
+        </div>
+        
+        <hr>
+
+        <div class="container col-4 offset-5">
+            <a class="btn btn-outline-light" href="/users" role="button">Home</a>
+            <a class="btn btn-outline-light" href="/user/{{ display_info[0]['id']  }}" role="button">Show User</a>
+        </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Info</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+
+</head>
+<body class="bg-info">
+
+    <div class="jumbotron container col-8 mt-4 bg-dark text-white border border-white">
+        <h1 class="display-4 text-center">USER {{ display_user[0]['id'] }}</h1>
+        <div class="container col-8">
+            <h3 class="text-secondary">Full Name:</h3> 
+            <h5>{{ display_user[0]['first_name'] }} {{ display_user[0]['last_name'] }}</h5>
+            <h3 class="text-secondary">Email:</h3>
+            <h5>{{ display_user[0]['email'] }} </h5>
+            <h3 class="text-secondary">Created On: </h3>
+            <h5>{{ display_user[0]['created_at'] }}</h5>
+            <h3 class="text-secondary">Last Updated On: </h3>
+            <h5>{{ display_user[0]['updated_at'] }} </h5>
+        </div>
+        
+        <hr>
+
+        <div class="container col-4 offset-5">
+            <a class="btn btn-outline-light" href="/users" role="button">Home</a>
+            <a class="btn btn-outline-light" href="/user/{{ display_user[0]['id'] }}/edit" role="button">Edit</a>
+            <a class="btn btn-outline-light" href="/user/{{ display_user[0]['id'] }}/delete" role="button">Delete</a>
+        </div>
+    </div>
+    
+</body>
+</html>

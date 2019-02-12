@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+
+
+</head>
+<body class="bg-info">
+    <div class="container-fluid">
+
+        <div class="jumbotron container col-10 text-center text-white bg-dark mt-4 border border-white">
+            <h1 class="display-4">All Users</h1>
+            <p class="lead">A list of all users in the database</p>
+            <form action="/users/new/">
+                <div class="container">
+                    <button type="submit" class="btn btn-primary btn-lg border border-white">Add User</button>
+                </div>
+            </form>
+            <hr class="my-4">
+
+            <table class="table table-striped text-white">
+                
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Created at</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in user_table %}
+                        <tr>
+                            <th scope="row">{{ user['id'] }}</th>
+                            <td>{{ user['first_name'] }} {{ user['last_name'] }}</td>
+                            <td>{{ user['email'] }}</td>
+                            <td>{{ user['created_at'] }}</td>
+                            <td>
+                                <div class="conatiner col-auto">
+                                    <a class="btn btn-outline-info" role="button" href="/user/{{ user['id'] }}">Show</a>
+                                    <a class="btn btn-outline-info" role="button" href="/user/{{ user['id'] }}/edit">Edit</a>
+                                    <form action="/user/{{ user['id']  }}/delete" method="POST">
+                                        <button type="submit" class="btn btn-outline-info">Delete</button>
+                                    </form>
+                                </div>
+                        
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+            </table>
+        
+        </div>
+
+    </div>
+    
+</body>
+</html>

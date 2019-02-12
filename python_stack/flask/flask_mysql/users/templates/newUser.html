@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New User</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <!-- <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css"> -->
+</head>
+<body class="bg-info">
+    <div class="container-fluid">
+        <br>
+        <div class="jumbotron col-8 container bg-secondary border border-white text-white mt-2">
+            <div class="col-auto">
+                <a class="btn btn-outline-light offset-10" href="/users" role="button">Home</a>
+            </div>
+            
+            <h1 class="display-4 text-center">Add a New User</h1>
+            <p class="lead text-center">Once you have your information filled out, submit it and it will be added to the Database</p>
+            <hr class="my-4">
+
+            <form action="/user/create/new" method="POST">
+
+                <div class="form-group col-8">
+                    <label for="first_name"> First Name:</label>
+                    <input type="text" class="form-control" id="first_name" aria-describedby="first_name" placeholder="First Name" name="first_name">
+                </div>
+
+                <div class="form-group col-8">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" class="form-control" id="last_name" aria-describedby="last_name" placeholder="Last Name" name="last_name">
+                </div>
+
+                <div class="form-group col-8">
+                    <label for="email">Email address</label>
+                    <input type="user_email" class="form-control" id="user_email" aria-describedby="user_email" placeholder="Email" name="user_email">
+                    <small id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.</small>
+                </div>
+
+                <div class="form-group col-4">
+                    <button type="submit" class="btn btn-primary border border-white">Submit</button>
+                </div>
+
+
+            </form>
+    
+        </div>
+        <br>
+
+    </div>
+ 
+    
+</body>
+</html>
