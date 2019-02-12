@@ -1,0 +1,43 @@
+if .lower().find("insert") >= 0:
+    self.connection.commit()
+    return cursor.lastrowid
+
+
+    *does not select a query to apply .lower mthod to 
+
+
+finally:
+    connection.close()
+
+* does not define self.connection so the connection is not defined and is not closed. 
+
+
+
+    def __init__(self, db):
+        connection = pymysql.connect(host='local',
+                                    user='root',  # change the user and password as needed
+                                    password='root',
+                                    db=db,
+                                    charset='utf8mb4',
+                                    cursorclass=pymysql.cursors.DictCursor,
+                                    autocommit=True)
+
+*changed "localhost" to 'local' and error is cannot connect to "Local" 
+
+
+class MySQLConnection:
+    def __init__(self, db):
+        connection = pymysql.connect(host='localhost',
+                                    user='Michael',  # change the user and password as needed
+                                    password='root',
+                                    db=db,
+                                    charset='utf8mb4',
+                                    cursorclass=pymysql.cursors.DictCursor,
+                                    autocommit=True)
+
+
+*the user "Michael" does not exist. So it cannot connect to the database 
+
+
+
+

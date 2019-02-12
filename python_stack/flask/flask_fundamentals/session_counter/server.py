@@ -17,19 +17,18 @@ def session_count():
     return render_template("counter.html")
 
     
+@app.route("/countadd2")
+def addtwo()
 
-@app.route("/count", methods=["POST"])
-def add_session():
-    print(request.form)
+return redirect("/")
 
-    return redirect("/")
 
 
 @app.route("/destroy")
 def destroy():
 
     session.clear()
-    
+
     return redirect("/")
 
 
