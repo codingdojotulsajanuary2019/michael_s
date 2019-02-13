@@ -1,8 +1,10 @@
-from flask import Flask, render_template, redirect, request 
+from flask import Flask, render_template, redirect, request , session, flash
 from mysqlconnection import connectToMySQL
 
 
 app = Flask(__name__)
+app.secret_key = "2SHEA"
+
 @app.route("/")
 def index():
     # call the function, passing in the name of our db
@@ -17,18 +19,33 @@ def index():
 
 @app.route("/create_friend", methods=["POST"])
 def add_friend_to_db():
-    mysql = connectToMySQL("first_flask")
 
-    query = "INSERT INTO friends (first_name, last_name, occupation, created_at, updated_at) VALUES (%(fn)s, %(ln)s, %(occup)s, NOW(), NOW()); "
+    is_valid = True
 
-    data = {
-        "fn": request.form["fname"],
-        "ln": request.form["lname"],
-        "occup": request.form["occ"]
-    }
+    if len(request.form['fname']) < 1:
+        is_valid = False
+        flash("Please enter a first name")
+    if len(request.form['lname']) < 1:
+    	is_valid = False
+    	flash("Please enter a last name")
+    if len(request.form['occ']) < 2:
+    	is_valid = False
+    	flash("Occupation should be at least 2 characters")
+    if is_valid:
+        flash("Friend Added Succesfully")
+        
+        mysql = connectToMySQL("first_flask")
 
-    new_Friend_id = mysql.query_db(query, data)
+        query = "INSERT INTO friends (first_name, last_name, occupation, created_at, updated_at) VALUES (%(fn)s, %(ln)s, %(occup)s, NOW(), NOW()); "
 
+        data = {
+            "fn": request.form["fname"],
+            "ln": request.form["lname"],
+            "occup": request.form["occ"]
+        }
+
+        new_Friend_id = mysql.query_db(query, data)
+ 
     return redirect("/")
 
  # QUERY: INSERT INTO first_flask (first_name, last_name, occupation, created_at, updated_at)

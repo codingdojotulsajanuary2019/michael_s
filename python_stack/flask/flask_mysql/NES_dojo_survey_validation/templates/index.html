@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Survey With Validation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
+
+</head>
+<body class="bg-dark">
+    <div class="nes-container mt-5">
+        <div class="jumbotron nes-container is-dark bg-secondary border rounded">
+            <h1 class="display-4 text-center">Dojo Survey</h1>
+            <div class="messages">
+                <div class="message -left">
+                    <div class="nes-balloon from-left">
+                        <p class="text-dark">I don't need Validation to be accepted......but this form does!</p>
+                    </div>
+                    <i class="nes-kirby"></i>
+                </div>
+            </div>
+            <!-- <p class="lead text-center balloon">With Validiations To Evaluate The Way I Validate The Validations</p> -->
+            <hr class="my-4">
+
+            <div class="form nes-container with-title">
+                <h2 class="title text-dark">Dojo Survey Form</h2>
+
+                <br>
+
+                <div class="nes-field col-8">
+                    <label for="name_field">First Name</label>
+                    <input type="text" id="name_field" class="nes-input" placeholder="First Name" name = "first_name">
+                </div>
+
+                <br>
+
+                <div class="nes-field col-8">
+                    <label for="name_field">Last Name</label>
+                    <input type="text" id="name_field" class="nes-input" placeholder="Last Name" name="last_name">
+                </div>
+
+                <br>
+
+                <div class="nes-field col-8">
+                    <h2>Location:</h2>
+                    <label>
+                        <input type="checkbox" class="nes-checkbox"/>
+                        <span>Tulsa</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="nes-checkbox" />
+                        <span>San Jose</span>
+                    </label>
+                </div>      
+
+                <div class="ned-field col-8">
+                    <label for="textarea_field">Comments (Optional)</label>
+                    <textarea id="textarea_field" class="nes-textarea" placeholder="Comments, Complaints, Life Advice" name="comment"></textarea>
+                </div>
+
+            
+        </div>
+    </div>
+    
+</body>
+</html>
