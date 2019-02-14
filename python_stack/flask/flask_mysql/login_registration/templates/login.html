@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login & Registration</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="bg-info">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron mt-5 border border-white">
+                <h1 class="display-4 text-center">Register</h1>
+                <p class="lead text-center">New Here? Sign Up!</p>
+                <hr class="my-4">
+                    <form action="/register" method="POST">
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input type="text" class="form-control" name="first_name" id="first_name" aria-describedby="first_name" placeholder="Enter First Name">
+                            {% with messages = get_flashed_messages(category_filter = ["first_name"]) %}
+                                {% if messages %}
+                                <ul class=flashes></ul>
+                                    {% for message in messages %}
+                                        <div class="text-danger">
+                                            <li class="text-monospace font-size">{{ message }}</li>
+                                        </div>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Enter Last Name">
+                            {% with messages = get_flashed_messages(category_filter = ["last_name"]) %}
+                                {% if messages %}
+                                <ul class=flashes></ul>
+                                    {% for message in messages %}
+                                        <div class="text-danger">
+                                            <li class="{{ last_name }}">{{ message }}</li>
+                                        </div>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                        <div class="form-group">
+    
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" name="email" id="email" aria-describedby="email" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            {% with messages = get_flashed_messages(category_filter=["email"]) %}
+                                {% if messages %}
+                                <ul class=flashes></ul>
+                                    {% for message in messages %}
+                                        <div class="text-danger">
+                                            <li class="{{ email }}">{{ message }}</li>
+                                        </div>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            {% endwith %}
+
+
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                            {% with messages = get_flashed_messages(category_filter=["password"]) %}
+                                {% if messages %}
+                                <ul class=flashes></ul>
+                                    {% for message in messages %}
+                                        <div class="text-danger">
+                                            <li class="{{ password }}">{{ message }}</li>
+                                        </div>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                        <div class="form-group">
+                            <label for="password_confirm">Confirm Password</label>
+                            <input type="password" class="form-control" name="password_confirm" id="password_confirm" placeholder="Confirm Password">
+                            {% with messages = get_flashed_messages(category_filter=["password"]) %}
+                                {% if messages %}
+                                <ul class=flashes></ul>
+                                    {% for message in messages %}
+                                        <div class="text-danger">
+                                            <li class="{{ password }}">{{ message }}</li>
+                                        </div>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary col-4">Sign Up</button>
+                    </form>
+                </p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="jumbotron mt-5 border border-white">
+                <h1 class="display-4 text-center">Login</h1>
+                <p class="lead text-center">Already Signed Up? Login!</p>
+                <hr class="my-4">
+                    <form action="/login", method="POST">
+                        <div class="form-group">
+                            <label for="login_email">Email</label>
+                            <input type="email" class="form-control" name="login_email" id="login_email" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary col-4">Log In</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
