@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ session['first_name'] }}'s Private Wall</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-dark bg-dark rounded">
+        <a class="navbar-brand" href="/wall">
+            <img src="{{ url_for ('static', filename = 'img/p.png') }}" width="30" height="30" class="d-inline-block align-top" alt="logo">
+            rivate Wall
+        </a>
+        <h5 class="text-white offset-7"">Welcome, {{ session['first_name'] }}</h5>
+        <a class="btn btn-outline-danger text-white" href="/logout" role="button">Log Out</a>
+    </nav>
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron container-fluid mt-2">
+                <div class="container">
+                    <h1 class="display-4">Your Messages</h1>
+                    <p class="lead">You have {{ count_messages }} new messages</p>
+                    <hr class="my-4">
+                    {% for message in messages %}
+                        <div class="container bg-secondary text-dark rounded border border-dark mt-2">
+                        <h6 class="text-white">{{ message['first_name'] }} {{message['last_name']}} said: <span class="small text-info font-italic">({{ message['created_at'] | humanize()}}) </span> </h6>
+                            <div class="container bg-light rounded">
+                                <p class="row ml-2">
+                                 {{ message['message'] }}
+                                </p>
+                            </div>
+                            <form action="/delete_message/{{ message['id'] }}" method="post">
+                                <button type="submit" class="btn btn-outline-info offset-10 mb-2">Delete</button>
+                            </form>
+                        </div>
+                    {% endfor  %}
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="jumbotron container-fluid mt-2">
+                <div class="container">
+                    <h1 class="display-4">Send Messages</h1>
+                    <p class="lead">You have sent {{ sent_count }} messages that have not been read </p>
+                    <hr class="my-4">
+                </div>
+                <div class="container">
+                    {%  for user in users %}
+                        {% if user['email'] != session['login_email'] %}
+                            <form action="/send_message/{{ user['id']  }}", method="POST">
+                                <div class="form-group text-info">
+                                    <label for="send_message">{{ user['first_name'] }} {{ user['last_name'] }}</label>
+                                    <textarea class="form-control" name="message_sent" id="send_message" rows="2" placeholder="Write {{ user['first_name'] }} a message...."></textarea>
+                                    <button type="submit" class="btn btn-outline-info offset-10 col-2 mt-3">Send</button>
+                                </div>
+                            </form>
+                        {%  endif %}
+                    {%  endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
