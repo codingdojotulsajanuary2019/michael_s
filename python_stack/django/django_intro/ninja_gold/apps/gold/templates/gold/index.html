@@ -10,39 +10,51 @@
 <body class='bg-dark text-white'>
     <h1 class="text-center">NINJA GOLD</h1>
     <div class="container row bg-secondary col-4 rounded border border-white offset-4 mb-2">
-        <h1 class=" container text-center">Your Gold: 0</h1>
+        <h1 class=" container text-center">Your Gold: {{request.session.gold_count}}</h1>
+        <a class="btn btn-primary offset-5" href="/reset" role="button">Reset</a>
 
     </div>
-    <div class="container-fluid row col-12 bg-primary text-center border border-white">
 
-        <div class="jumbotron col-3 text-dark text-center mt-4 container border border-dark">
-            <h3 class="display-4">FARM</h3>
-            <p class="lead">(Earns 10-20 gold)</p>
-            <hr class="my-4">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Find Gold</a>
-            
+    <div class="container-fluid bg-primary text-center border border-white">
+        <form action="/process_money" method="POST">
+            {% csrf_token %}
+
+            <div class="jumbotron col-2 text-dark text-center mt-4 container border border-dark d-inline-block">
+                <h4>FARM</h4>
+                <p class="lead">(Earns 10-20 gold)</p>
+                <hr class="my-4">
+                <button class="btn btn-primary" name="gold" value="farm" type="submit">Find Gold</button>
+                
+            </div>
+            <div class="jumbotron col-2 text-dark text-center mt-3 container border border-dark d-inline-block">
+                <h4>CAVE</h4>
+                <p class="lead">(Earns 5-10 gold)</p>
+                <hr class="my-4">
+                <button class="btn btn-primary" name="gold" value="cave" type="submit">Find Gold</button>
+                
+            </div>
+            <div class="jumbotron col-2 text-dark text-center mt-4 container border border-dark d-inline-block">
+                <h4>HOUSE</h4>
+                <p class="lead">(Earns 2-5 gold)</p>
+                <hr class="my-4">
+                <button class="btn btn-primary" name="gold" value="house" type="submit">Find Gold</button>
+                
+            </div>
+            <div class="jumbotron col-2 text-dark text-center mt-4 container border border-dark d-inline-block">
+                <h4>CASINO</h4>
+                <p class="lead">(Earns/Takes 0-50 gold)</p>
+                <hr class="my-4">
+                <button class="btn btn-primary" name="gold" value="casino" type="submit">Find Gold</button>
+                
+            </form>
         </div>
-        <div class="jumbotron col-3 text-dark text-center mt-4 container border border-dark">
-            <h3 class="display-4">CAVE</h3>
-            <p class="lead">(Earns 5-10 gold)</p>
-            <hr class="my-4">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Find Gold</a>
-            
-        </div>
-        <div class="jumbotron col-3 text-dark text-center mt-4 container border border-dark">
-            <h3 class="display-4">HOUSE</h3>
-            <p class="lead">(Earns 2-5 gold)</p>
-            <hr class="my-4">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Find Gold</a>
-            
-        </div>
-        <div class="jumbotron col-3 text-dark text-center mt-4 container border border-dark">
-            <h3 class="display-4">CASINO</h3>
-            <p class="lead">(Earns/Takes 0-50 gold)</p>
-            <hr class="my-4">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Find Gold</a>
-            
-        </div>
+    </div>
+    <div class="container col-10 bg-primary overflow-auto border border-white rounded mt-2" style="max-height: 200px">
+        <h5>Activities:</h5>
+        <ul>
+            {{request.session.message | safe }}
+        </ul>
+
     </div>
     
     
