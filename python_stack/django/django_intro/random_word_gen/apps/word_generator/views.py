@@ -2,8 +2,11 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.utils.crypto import get_random_string
 
 def index(request):
+    if 'count' not in request.session:
+        request.session['count'] = 1
+    else:
+        request.session['count'] += 1
 
-    request.session['count'] = request.session['count'] + 1
 
 
     getword = {
