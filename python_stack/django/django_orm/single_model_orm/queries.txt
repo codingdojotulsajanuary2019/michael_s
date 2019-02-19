@@ -1,0 +1,22 @@
+Users.objects.create(first_name = "Michael", last_name = "Shea", email_address = "MichaelShea1814@gmail.com", age = "27")
+
+Users.objects.create(first_name = "Ali", last_name = "Thurman", email_address = "12AliT@southbarber.com", age = "25")
+
+Users.objects.create(first_name = "Cindy", last_name = "Shea", email_address = "SheaCindy@yahoo.com", age = 53)
+
+Users.objects.all()
+
+Users.objects.last()
+
+Users.objects.first()
+
+>>> update = Users.objects.get(id=3)
+>>> update.last_name = "Pankcakes"
+>>> update.save
+<bound method Model.save of id: 3, First Name: Cindy, Last Name:  Pankcakes, Email: SheaCindy@yahoo.com, Created At: 2019-02-18 18:27:50.545037+00:00, Updated At: 2019-02-18 18:27:50.545357+00:00 >
+
+>>> delete_user = Users.objects.get(id=2)
+>>> delete_user.delete()
+(1, {'users_app.Users': 1})
+
+>>> Users.objects.all().order_by("-first_name")

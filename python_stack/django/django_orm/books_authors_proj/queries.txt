@@ -1,0 +1,84 @@
+>>> Book.objects.create(title = "C Sharp", description = " Book about C Sharp")
+<Book: Book object>
+>>> Book.objects.create(title = "Java", description = "Book about the JAVA language")
+<Book: Book object>
+>>> Book.objects.create(title = "Python", description = "Book about the Python programing language")
+<Book: Book object>
+>>> Book.objects.create(title = "PHP", description = "Book about the PHP programing language")
+<Book: Book object>
+>>> Book.objects.create(title = "Ruby", description = "Book about the Ruby programing language")
+<Book: Book object>
+
+>>> Author.objects.create(first_name = "Jane", last_name = "Austen")
+id: 1, First Name: Jane, Last Name:  Austen, Created At: 2019-02-18 22:04:03.570083+00:00, Updated At: 2019-02-18 22:04:03.570523+00:00 
+>>> Author.objects.create(first_name = "Emily" last_name = "Dickinson")
+>>> Author.objects.create(first_name = "Emily", last_name = "Dickinson")
+id: 2, First Name: Emily, Last Name:  Dickinson, Created At: 2019-02-18 22:04:48.616467+00:00, Updated At: 2019-02-18 22:04:48.616513+00:00 
+>>> Author.objects.create(first_name = "Fyodor", last_name = "Dostoevsky")
+id: 3, First Name: Fyodor, Last Name:  Dostoevsky, Created At: 2019-02-18 22:05:18.095463+00:00, Updated At: 2019-02-18 22:05:18.095510+00:00 
+>>> Author.objects.create(first_name = "William", last_name = "Shakespeare")
+id: 4, First Name: William, Last Name:  Shakespeare, Created At: 2019-02-18 22:05:43.957840+00:00, Updated At: 2019-02-18 22:05:43.957899+00:00 
+>>> Author.objects.create(first_name = "Lau", last_name = "Tzu")
+id: 5, First Name: Lau, Last Name:  Tzu, Created At: 2019-02-18 22:06:04.273615+00:00, Updated At: 2019-02-18 22:06:04.273665+00:00 
+>>> 
+
+>>> csharp = Book.objects.get(id=1)
+>>> csharp.title = "C#"
+>>> csharp.save()
+
+>>> new_name = Author.objects.get(id=4)
+>>> new_name.first_name = "Bill"
+>>> new_name.save()
+
+>>> author1 = Author.objects.get(id=1)
+>>> author1.books.add(Book.objects.get(id=1))
+>>> author1.books.all()
+<QuerySet [id: 1, Title: C#, Description:   Book about C Sharp, Created At: 2019-02-18 21:53:57.683877+00:00, Updated At: 2019-02-18 22:18:00.593348+00:00 ]>
+>>> author1.books.add(Book.objects.get(id=2))
+>>> author1.books.all()
+<QuerySet [id: 1, Title: C#, Description:   Book about C Sharp, Created At: 2019-02-18 21:53:57.683877+00:00, Updated At: 2019-02-18 22:18:00.593348+00:00 , id: 2, Title: Java, Description:  Book about the JAVA language, Created At: 2019-02-18 21:54:45.384850+00:00, Updated At: 2019-02-18 21:54:45.384898+00:00 ]>
+>>> 
+
+>>> author2.books.add(Book.objects.get(id=1))
+>>> author2.books.add(Book.objects.get(id=2))
+>>> author2.books.add(Book.objects.get(id=3))
+>>> author2.books.all()
+<QuerySet [id: 1, Title: C#, Description:   Book about C Sharp, Created At: 2019-02-18 21:53:57.683877+00:00, Updated At: 2019-02-18 22:18:00.593348+00:00 , id: 2, Title: Java, Description:  Book about the JAVA language, Created At: 2019-02-18 21:54:45.384850+00:00, Updated At: 2019-02-18 21:54:45.384898+00:00 , id: 3, Title: Python, Description:  Book about the Python programing language, Created At: 2019-02-18 21:55:15.050086+00:00, Updated At: 2019-02-18 21:55:15.050170+00:00 ]>
+>>> 
+
+>>> author3 = Author.objects.get(id=3)
+>>> author3.books.add(Book.objects.get(id=1))
+>>> author3.books.add(Book.objects.get(id=2))
+>>> author3.books.add(Book.objects.get(id=3))
+>>> author3.books.add(Book.objects.get(id=4))
+>>> author3.books.all()
+<QuerySet [id: 1, Title: C#, Description:   Book about C Sharp, Created At: 2019-02-18 21:53:57.683877+00:00, Updated At: 2019-02-18 22:18:00.593348+00:00 , id: 2, Title: Java, Description:  Book about the JAVA language, Created At: 2019-02-18 21:54:45.384850+00:00, Updated At: 2019-02-18 21:54:45.384898+00:00 , id: 3, Title: Python, Description:  Book about the Python programing language, Created At: 2019-02-18 21:55:15.050086+00:00, Updated At: 2019-02-18 21:55:15.050170+00:00 , id: 4, Title: PHP, Description:  Book about the PHP programing language, Created At: 2019-02-18 21:55:42.414455+00:00, Updated At: 2019-02-18 21:55:42.414505+00:00 ]>
+>>> 
+
+>>> author4 = Author.objects.get(id=4)
+>>> author4.books.add(Book.objects.get(id=1))
+>>> author4.books.add(Book.objects.get(id=2))
+>>> author4.books.add(Book.objects.get(id=3))
+>>> author4.books.add(Book.objects.get(id=4))
+>>> author4.books.add(Book.objects.get(id=5))
+>>> author4.books.all()
+
+>>> author3.books.all()
+<QuerySet [id: 1, Title: C#, Description:   Book about C Sharp, Created At: 2019-02-18 21:53:57.683877+00:00, Updated At: 2019-02-18 22:18:00.593348+00:00 , id: 2, Title: Java, Description:  Book about the JAVA language, Created At: 2019-02-18 21:54:45.384850+00:00, Updated At: 2019-02-18 21:54:45.384898+00:00 , id: 3, Title: Python, Description:  Book about the Python programing language, Created At: 2019-02-18 21:55:15.050086+00:00, Updated At: 2019-02-18 21:55:15.050170+00:00 , id: 4, Title: PHP, Description:  Book about the PHP programing language, Created At: 2019-02-18 21:55:42.414455+00:00, Updated At: 2019-02-18 21:55:42.414505+00:00 ]>
+>>> 
+
+>>> book3 = Book.objects.get(id=3)
+>>> book3.authors.remove(Author.objects.get(id=1))
+>>> 
+
+>>> author5 = Author.objects.get(id=5)
+>>> book2 = Book.objects.get(id=2)
+ book2.authors.add(author5)
+
+ >>> author3.books.all()
+<QuerySet [id: 1, Title: C#, Description:   Book about C Sharp, Created At: 2019-02-18 21:53:57.683877+00:00, Updated At: 2019-02-18 22:18:00.593348+00:00 , id: 2, Title: Java, Description:  Book about the JAVA language, Created At: 2019-02-18 21:54:45.384850+00:00, Updated At: 2019-02-18 21:54:45.384898+00:00 , id: 3, Title: Python, Description:  Book about the Python programing language, Created At: 2019-02-18 21:55:15.050086+00:00, Updated At: 2019-02-18 21:55:15.050170+00:00 , id: 4, Title: PHP, Description:  Book about the PHP programing language, Created At: 2019-02-18 21:55:42.414455+00:00, Updated At: 2019-02-18 21:55:42.414505+00:00 ]>
+>>> 
+
+>>> book5.authors.all()
+<QuerySet [id: 4, First Name: Bill, Last Name:  Shakespeare, Notes: Notes about this book, Created At: 2019-02-18 22:05:43.957840+00:00, Updated At: 2019-02-18 22:20:18.471544+00:00 ]>
+>>> 
