@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View Show</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body class="bg-dark">
+    <div class="jumbotron col-8 container mt-5">
+        <h1 class="display-4">{{show.title}}</h1>
+        <h4>Show ID: {{show.id}}</h4>
+        <h4>Network: {{show.network}}</h4>
+        <h4>Release Date: {{show.release_date}}</h4>
+        <hr class="my-4">
+        <h4>Description:</h4>
+        <p>{{show.description}}</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/" role="button">Back to All Shows</a>
+        </p>
+    </div>
+    
+</body>
+</html>

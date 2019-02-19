@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>All Shows</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="bg-dark">
+<div class="jumbotron bg-light col-8 container">
+    <h1 class="display-4 text-center">All Shows</h1>
+    <hr class="my-4">
+    <a class="btn btn-outline-info col-2 offset-5" href="/shows/new" role="button">Add Show</a>
+</div>
+<div class="jumbotron col-8 container">
+    <table class="table table-hover table-light table-striped text-center">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Network</th>
+                    <th scope="col">Release Date</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for show in all_shows  %}
+                <tr>
+                    <th scope="row">{{show.id}}</th>
+                    <td>{{show.title}}</td>
+                    <td>{{show.network}}</td>
+                    <td>{{show.release_date}}</td>
+                    <td>
+                        <a class="btn btn-outline-info" href="shows/{{show.id}}" role="button">SHOW</a>
+                        <a class="btn btn-outline-info" href="shows/{{show.id}}/edit" role="button">EDIT</a>
+                        <a class="btn btn-outline-info" href="show/{{show.id}}/delete" role="button">DELETE</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+</div>
+
+    
+</body>
+</html>

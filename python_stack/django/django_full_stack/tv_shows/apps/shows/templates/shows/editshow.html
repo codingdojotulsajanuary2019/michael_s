@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit {{show.title}}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body class="bg-dark">
+    <div class="jumbotron text-center bg-secondary text-white col-8 container">
+        <h1 class="display-4">Edit Show</h1>
+        <a class="btn btn-outline-light mt-2" href="/" role="button">All Shows</a>
+    </div>
+    <div class="container">
+        <div class="jumbotron border border-dark">
+            <form action="/show/{{show.id}}/update" method="post" class="container">
+                {% csrf_token %}
+                <div class="form-group col-8 container text-center text-primary">
+                    <label for="Title">Title</label>
+                    <input type="text" class="form-control" name="showtitle" id="title" aria-describedby="show_title" value = "{{show.title}}">
+                </div>
+                <div class="conatiner text-center">
+
+                    <div class="form-group col-4 container d-inline-block text-primary">
+                        <label for="network">Network</label>
+                        <input type="text" class="form-control" name="shownetwork" id="network" aria-describedby="show_network"
+                            value="{{show.network}}">
+                    </div>
+                    <div class="form-group col-4 container d-inline-block text-primary">
+                        <label for="network">Release Date</label>
+                        <input type="date" class="form-control" name="releasedate" id="releasedate" aria-describedby="show_release_date" value="{{show.release_date | date:'Y-m-d'}}">
+                    </div>
+
+                </div>
+                <div class="form-group col-8 container text-center text-primary">
+                    <label for="showdescription">Show Description</label>
+                    <textarea class="form-control" name="showdescription" id="showdescription" rows="3">{{show.description}}</textarea>
+                </div>
+                <div class="form-group col-6 container text-center">
+                    <button type="submit" class="btn btn-outline-primary">Update Show Info</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
