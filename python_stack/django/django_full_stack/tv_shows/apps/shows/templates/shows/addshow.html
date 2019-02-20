@@ -9,9 +9,11 @@
 
 </head>
 <body class="bg-dark">
-    <div class="jumbotron text-center bg-secondary text-white col-8 container">
-        <h1 class="display-4">Add A New Show</h1>
-        <a class="btn btn-outline-light mt-2" href="/" role="button">All Shows</a>
+    <div class="container">
+        <div class="jumbotron text-center bg-secondary text-white col-12 mt-5">
+            <h1 class="display-4">Add A New Show</h1>
+            <a class="btn btn-outline-light mt-2" href="/" role="button">All Shows</a>
+        </div>
     </div>
     <div class="container">
         <div class="jumbotron border border-dark">
@@ -19,12 +21,30 @@
                 {% csrf_token  %}
                 <div class="form-group col-8 container text-center text-primary">
                     <label for="Title">Title</label>
+                    {%if messages%}
+                        <ul>
+                            {% for message in messages %}
+                                {% if 'showtitle' in message.tags %}
+                                <p class="text-danger">{{message}}</p>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
                     <input type="text" class="form-control" name="showtitle" id="title" aria-describedby="show_title" placeholder="Show Title">
                 </div>
                 <div class="conatiner text-center">
 
                     <div class="form-group col-4 container d-inline-block text-primary">
                         <label for="network">Network</label>
+                        {%if messages%}
+                            <ul>
+                                {% for message in messages %}
+                                    {% if 'shownetwork' in message.tags %}
+                                    <p class="text-danger">{{message}}</p>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                         <input type="text" class="form-control" name="shownetwork" id="network" aria-describedby="show_network" placeholder="Show Network">
                     </div>
                     <div class="form-group col-4 container d-inline-block text-primary">
@@ -35,6 +55,15 @@
                 </div>
                 <div class="form-group col-8 container text-center text-primary">
                     <label for="showdescription">Show Description</label>
+                    {%if messages%}
+                        <ul>
+                            {% for message in messages %}
+                                {% if 'showdescription' in message.tags %}
+                                <p class="text-danger">{{message}}</p>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
                     <textarea class="form-control" name="showdescription" id="showdescription" rows="3" placeholder="Show Description"></textarea>
                 </div>
                 <div class="form-group col-6 container text-center">
