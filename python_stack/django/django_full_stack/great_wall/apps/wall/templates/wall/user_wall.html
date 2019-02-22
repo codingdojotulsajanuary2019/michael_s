@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wall</title>
+    {% load static %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'wall/css/style.css' %}">  
+</head>
+<body>
+    {% load humanize %}
+    <nav class="navbar navbar-dark bg-secondary">
+        <h2 class="text-white">{{request.session.first_name}}'s Wall</h2>
+        <h5 class="text-white align-right offset-8">Logged In as, {{request.session.first_name}}</h5>
+        <a class="btn btn-outline-light" href="/logout" role="button">Logout</a>
+        
+    </nav>
+    <div class="card col-5 container bg-transparent mt-2 text-white">
+        <h1 class="">Create Post</h1>
+        <form action="/make_post" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="make_post"></label>
+                <textarea class="form-control" name = "post" id="make_post" rows="3" placeholder="What's on your mind, {{request.session.first_name}}?"></textarea>
+            </div>
+            <button class="btn btn-outline-light offset-10 col-2" type="submit">Post</button>
+        </form>
+    </div>
+{% for post in posts reversed %}
+<div class="card col-5 container bg-transparent mt-2 text-white">
+    <div class="card-header">
+        <u>{{ post.user_id.first_name  }} {{post.user_id.last_name}} said: </u> 
+        <div>
+            <small>
+                <em>
+                ({{post.created_at|naturaltime}})
+                </em>
+            </small>
+        </div>
+    </div>
+    <div class="card-body">
+            <h2 class="offset-2">{{post.message}}</h2>
+            <hr>
+            <h5><u>Comments:</u></h5>
+            {% for comment in comments  %}
+                {% if comment.post_id == post  %}
+                <div class="container bg-transparent text-white col-8 offset-2">
+                    <div>
+                        {{comment.user_id.first_name}} {{comment.user_id.last_name}}:
+                        <small>
+                            <em>
+                                ({{comment.created_at|naturaltime}})
+                            </em>
+                        </small>
+                        <br>
+                        <h5 class="container bg-primary p-2 rounded">{{comment.comment}}</h5>
+                    </div>
+                </div>
+                {% endif  %}
+            {% endfor  %}
+            <form action="/make_comment" method="POST">
+                {% csrf_token  %}
+                <div class="form-group">
+                    <label for="comment"></label>
+                    <textarea class="form-control col-8 container" name="comment" id="comment" rows="2" placeholder="Comment on {{post.user_id.first_name}}'s post"></textarea>
+                    <input type="hidden" name="post_id" value="{{post.id}}">
+                    <button class="btn btn-outline-light offset-8 mt-1" type="submit">Comment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor  %}
+
+</body>
+</html>

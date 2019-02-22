@@ -1,0 +1,5 @@
+body {
+    background-image: url('/static/wall/img/spacebg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
