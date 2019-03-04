@@ -1,0 +1,28 @@
+michaels-MacBook-Pro:firstCSharp Shea$ dotnet --version
+2.1.403
+
+michaels-MacBook-Pro:test Shea$ dotnet new console
+The template "Console Application" was created successfully.
+
+Processing post-creation actions...
+Running 'dotnet restore' on /Users/Shea/Desktop/coding_dojo/c#/Test/Test.csproj...
+  Restoring packages for /Users/Shea/Desktop/coding_dojo/c#/Test/Test.csproj...
+  Generating MSBuild file /Users/Shea/Desktop/coding_dojo/c#/Test/obj/Test.csproj.nuget.g.props.
+  Generating MSBuild file /Users/Shea/Desktop/coding_dojo/c#/Test/obj/Test.csproj.nuget.g.targets.
+  Restore completed in 244.32 ms for /Users/Shea/Desktop/coding_dojo/c#/Test/Test.csproj.
+
+Restore succeeded.
+
+michaels-MacBook-Pro:test Shea$ dotnet build
+Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restore completed in 44.72 ms for /Users/Shea/Desktop/coding_dojo/c#/Test/Test.csproj.
+  Test -> /Users/Shea/Desktop/coding_dojo/c#/Test/bin/Debug/netcoreapp2.1/Test.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.61
+michaels-MacBook-Pro:test Shea$ 

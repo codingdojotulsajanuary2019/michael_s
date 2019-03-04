@@ -1,0 +1,11 @@
+/Users/Shea/Desktop/coding_dojo/c#/RandomValues/bin/Debug/netcoreapp2.1/RandomValues.deps.json
+/Users/Shea/Desktop/coding_dojo/c#/RandomValues/bin/Debug/netcoreapp2.1/RandomValues.runtimeconfig.json
+/Users/Shea/Desktop/coding_dojo/c#/RandomValues/bin/Debug/netcoreapp2.1/RandomValues.runtimeconfig.dev.json
+/Users/Shea/Desktop/coding_dojo/c#/RandomValues/bin/Debug/netcoreapp2.1/RandomValues.dll
+/Users/Shea/Desktop/coding_dojo/c#/RandomValues/bin/Debug/netcoreapp2.1/RandomValues.pdb
+/Users/Shea/Desktop/coding_dojo/c#/RandomValues/obj/Debug/netcoreapp2.1/RandomValues.csprojAssemblyReference.cache
+/Users/Shea/Desktop/coding_dojo/c#/RandomValues/obj/Debug/netcoreapp2.1/RandomValues.csproj.CoreCompileInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/RandomValues/obj/Debug/netcoreapp2.1/RandomValues.AssemblyInfoInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/RandomValues/obj/Debug/netcoreapp2.1/RandomValues.AssemblyInfo.cs
+/Users/Shea/Desktop/coding_dojo/c#/RandomValues/obj/Debug/netcoreapp2.1/RandomValues.dll
+/Users/Shea/Desktop/coding_dojo/c#/RandomValues/obj/Debug/netcoreapp2.1/RandomValues.pdb

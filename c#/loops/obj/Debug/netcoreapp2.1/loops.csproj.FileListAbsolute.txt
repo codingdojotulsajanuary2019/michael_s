@@ -1,0 +1,11 @@
+/Users/Shea/Desktop/coding_dojo/c#/loops/obj/Debug/netcoreapp2.1/loops.csprojAssemblyReference.cache
+/Users/Shea/Desktop/coding_dojo/c#/loops/obj/Debug/netcoreapp2.1/loops.csproj.CoreCompileInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/loops/obj/Debug/netcoreapp2.1/loops.AssemblyInfoInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/loops/obj/Debug/netcoreapp2.1/loops.AssemblyInfo.cs
+/Users/Shea/Desktop/coding_dojo/c#/loops/bin/Debug/netcoreapp2.1/loops.deps.json
+/Users/Shea/Desktop/coding_dojo/c#/loops/bin/Debug/netcoreapp2.1/loops.runtimeconfig.json
+/Users/Shea/Desktop/coding_dojo/c#/loops/bin/Debug/netcoreapp2.1/loops.runtimeconfig.dev.json
+/Users/Shea/Desktop/coding_dojo/c#/loops/bin/Debug/netcoreapp2.1/loops.dll
+/Users/Shea/Desktop/coding_dojo/c#/loops/bin/Debug/netcoreapp2.1/loops.pdb
+/Users/Shea/Desktop/coding_dojo/c#/loops/obj/Debug/netcoreapp2.1/loops.dll
+/Users/Shea/Desktop/coding_dojo/c#/loops/obj/Debug/netcoreapp2.1/loops.pdb
