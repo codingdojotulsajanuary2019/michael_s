@@ -1,0 +1,11 @@
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/unboxing/bin/Debug/netcoreapp2.1/unboxing.deps.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/unboxing/bin/Debug/netcoreapp2.1/unboxing.runtimeconfig.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/unboxing/bin/Debug/netcoreapp2.1/unboxing.runtimeconfig.dev.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/unboxing/bin/Debug/netcoreapp2.1/unboxing.dll
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/unboxing/bin/Debug/netcoreapp2.1/unboxing.pdb
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/unboxing/obj/Debug/netcoreapp2.1/unboxing.csprojAssemblyReference.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/unboxing/obj/Debug/netcoreapp2.1/unboxing.csproj.CoreCompileInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/unboxing/obj/Debug/netcoreapp2.1/unboxing.AssemblyInfoInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/unboxing/obj/Debug/netcoreapp2.1/unboxing.AssemblyInfo.cs
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/unboxing/obj/Debug/netcoreapp2.1/unboxing.dll
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/unboxing/obj/Debug/netcoreapp2.1/unboxing.pdb

@@ -1,0 +1,11 @@
+/Users/Shea/Desktop/Multiplication_Table/bin/Debug/netcoreapp2.1/Multiplication_Table.deps.json
+/Users/Shea/Desktop/Multiplication_Table/bin/Debug/netcoreapp2.1/Multiplication_Table.runtimeconfig.json
+/Users/Shea/Desktop/Multiplication_Table/bin/Debug/netcoreapp2.1/Multiplication_Table.runtimeconfig.dev.json
+/Users/Shea/Desktop/Multiplication_Table/bin/Debug/netcoreapp2.1/Multiplication_Table.dll
+/Users/Shea/Desktop/Multiplication_Table/bin/Debug/netcoreapp2.1/Multiplication_Table.pdb
+/Users/Shea/Desktop/Multiplication_Table/obj/Debug/netcoreapp2.1/Multiplication_Table.csprojAssemblyReference.cache
+/Users/Shea/Desktop/Multiplication_Table/obj/Debug/netcoreapp2.1/Multiplication_Table.csproj.CoreCompileInputs.cache
+/Users/Shea/Desktop/Multiplication_Table/obj/Debug/netcoreapp2.1/Multiplication_Table.AssemblyInfoInputs.cache
+/Users/Shea/Desktop/Multiplication_Table/obj/Debug/netcoreapp2.1/Multiplication_Table.AssemblyInfo.cs
+/Users/Shea/Desktop/Multiplication_Table/obj/Debug/netcoreapp2.1/Multiplication_Table.dll
+/Users/Shea/Desktop/Multiplication_Table/obj/Debug/netcoreapp2.1/Multiplication_Table.pdb
