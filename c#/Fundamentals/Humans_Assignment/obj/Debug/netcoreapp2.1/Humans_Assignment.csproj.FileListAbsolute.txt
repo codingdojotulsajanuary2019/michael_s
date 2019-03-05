@@ -1,0 +1,11 @@
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Humans_Assignment/obj/Debug/netcoreapp2.1/Humans_Assignment.csprojAssemblyReference.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Humans_Assignment/obj/Debug/netcoreapp2.1/Humans_Assignment.csproj.CoreCompileInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Humans_Assignment/obj/Debug/netcoreapp2.1/Humans_Assignment.AssemblyInfoInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Humans_Assignment/obj/Debug/netcoreapp2.1/Humans_Assignment.AssemblyInfo.cs
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Humans_Assignment/bin/Debug/netcoreapp2.1/Humans_Assignment.deps.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Humans_Assignment/bin/Debug/netcoreapp2.1/Humans_Assignment.runtimeconfig.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Humans_Assignment/bin/Debug/netcoreapp2.1/Humans_Assignment.runtimeconfig.dev.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Humans_Assignment/bin/Debug/netcoreapp2.1/Humans_Assignment.dll
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Humans_Assignment/bin/Debug/netcoreapp2.1/Humans_Assignment.pdb
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Humans_Assignment/obj/Debug/netcoreapp2.1/Humans_Assignment.dll
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Humans_Assignment/obj/Debug/netcoreapp2.1/Humans_Assignment.pdb
