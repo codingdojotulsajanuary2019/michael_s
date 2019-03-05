@@ -1,0 +1,11 @@
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/collections/bin/Debug/netcoreapp2.1/collections.deps.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/collections/bin/Debug/netcoreapp2.1/collections.runtimeconfig.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/collections/bin/Debug/netcoreapp2.1/collections.runtimeconfig.dev.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/collections/bin/Debug/netcoreapp2.1/collections.dll
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/collections/bin/Debug/netcoreapp2.1/collections.pdb
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/collections/obj/Debug/netcoreapp2.1/collections.csprojAssemblyReference.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/collections/obj/Debug/netcoreapp2.1/collections.csproj.CoreCompileInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/collections/obj/Debug/netcoreapp2.1/collections.AssemblyInfoInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/collections/obj/Debug/netcoreapp2.1/collections.AssemblyInfo.cs
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/collections/obj/Debug/netcoreapp2.1/collections.dll
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/collections/obj/Debug/netcoreapp2.1/collections.pdb
