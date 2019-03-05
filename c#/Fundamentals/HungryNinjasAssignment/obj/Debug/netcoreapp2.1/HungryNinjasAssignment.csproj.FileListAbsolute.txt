@@ -1,0 +1,11 @@
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/HungryNinjasAssignment/obj/Debug/netcoreapp2.1/HungryNinjasAssignment.csprojAssemblyReference.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/HungryNinjasAssignment/obj/Debug/netcoreapp2.1/HungryNinjasAssignment.csproj.CoreCompileInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/HungryNinjasAssignment/obj/Debug/netcoreapp2.1/HungryNinjasAssignment.AssemblyInfoInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/HungryNinjasAssignment/obj/Debug/netcoreapp2.1/HungryNinjasAssignment.AssemblyInfo.cs
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/HungryNinjasAssignment/bin/Debug/netcoreapp2.1/HungryNinjasAssignment.deps.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/HungryNinjasAssignment/bin/Debug/netcoreapp2.1/HungryNinjasAssignment.runtimeconfig.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/HungryNinjasAssignment/bin/Debug/netcoreapp2.1/HungryNinjasAssignment.runtimeconfig.dev.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/HungryNinjasAssignment/bin/Debug/netcoreapp2.1/HungryNinjasAssignment.dll
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/HungryNinjasAssignment/bin/Debug/netcoreapp2.1/HungryNinjasAssignment.pdb
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/HungryNinjasAssignment/obj/Debug/netcoreapp2.1/HungryNinjasAssignment.dll
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/HungryNinjasAssignment/obj/Debug/netcoreapp2.1/HungryNinjasAssignment.pdb
