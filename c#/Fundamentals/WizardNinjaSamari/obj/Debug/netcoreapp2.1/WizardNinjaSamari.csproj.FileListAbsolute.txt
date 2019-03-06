@@ -1,0 +1,11 @@
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/WizardNinjaSamari/obj/Debug/netcoreapp2.1/WizardNinjaSamari.csprojAssemblyReference.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/WizardNinjaSamari/obj/Debug/netcoreapp2.1/WizardNinjaSamari.csproj.CoreCompileInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/WizardNinjaSamari/obj/Debug/netcoreapp2.1/WizardNinjaSamari.AssemblyInfoInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/WizardNinjaSamari/obj/Debug/netcoreapp2.1/WizardNinjaSamari.AssemblyInfo.cs
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/WizardNinjaSamari/bin/Debug/netcoreapp2.1/WizardNinjaSamari.deps.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/WizardNinjaSamari/bin/Debug/netcoreapp2.1/WizardNinjaSamari.runtimeconfig.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/WizardNinjaSamari/bin/Debug/netcoreapp2.1/WizardNinjaSamari.runtimeconfig.dev.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/WizardNinjaSamari/bin/Debug/netcoreapp2.1/WizardNinjaSamari.dll
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/WizardNinjaSamari/bin/Debug/netcoreapp2.1/WizardNinjaSamari.pdb
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/WizardNinjaSamari/obj/Debug/netcoreapp2.1/WizardNinjaSamari.dll
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/WizardNinjaSamari/obj/Debug/netcoreapp2.1/WizardNinjaSamari.pdb
