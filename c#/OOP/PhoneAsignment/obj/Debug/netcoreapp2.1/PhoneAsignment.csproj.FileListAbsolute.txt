@@ -1,0 +1,11 @@
+/Users/Shea/Desktop/coding_dojo/c#/OOP/PhoneAsignment/bin/Debug/netcoreapp2.1/PhoneAsignment.deps.json
+/Users/Shea/Desktop/coding_dojo/c#/OOP/PhoneAsignment/bin/Debug/netcoreapp2.1/PhoneAsignment.runtimeconfig.json
+/Users/Shea/Desktop/coding_dojo/c#/OOP/PhoneAsignment/bin/Debug/netcoreapp2.1/PhoneAsignment.runtimeconfig.dev.json
+/Users/Shea/Desktop/coding_dojo/c#/OOP/PhoneAsignment/bin/Debug/netcoreapp2.1/PhoneAsignment.dll
+/Users/Shea/Desktop/coding_dojo/c#/OOP/PhoneAsignment/bin/Debug/netcoreapp2.1/PhoneAsignment.pdb
+/Users/Shea/Desktop/coding_dojo/c#/OOP/PhoneAsignment/obj/Debug/netcoreapp2.1/PhoneAsignment.csprojAssemblyReference.cache
+/Users/Shea/Desktop/coding_dojo/c#/OOP/PhoneAsignment/obj/Debug/netcoreapp2.1/PhoneAsignment.csproj.CoreCompileInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/OOP/PhoneAsignment/obj/Debug/netcoreapp2.1/PhoneAsignment.AssemblyInfoInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/OOP/PhoneAsignment/obj/Debug/netcoreapp2.1/PhoneAsignment.AssemblyInfo.cs
+/Users/Shea/Desktop/coding_dojo/c#/OOP/PhoneAsignment/obj/Debug/netcoreapp2.1/PhoneAsignment.dll
+/Users/Shea/Desktop/coding_dojo/c#/OOP/PhoneAsignment/obj/Debug/netcoreapp2.1/PhoneAsignment.pdb
