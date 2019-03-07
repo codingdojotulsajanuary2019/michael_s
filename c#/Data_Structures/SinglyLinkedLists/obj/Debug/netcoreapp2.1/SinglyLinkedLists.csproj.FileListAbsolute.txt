@@ -1,0 +1,11 @@
+/Users/Shea/Desktop/coding_dojo/c#/Data_Structures/SinglyLinkedLists/bin/Debug/netcoreapp2.1/SinglyLinkedLists.deps.json
+/Users/Shea/Desktop/coding_dojo/c#/Data_Structures/SinglyLinkedLists/bin/Debug/netcoreapp2.1/SinglyLinkedLists.runtimeconfig.json
+/Users/Shea/Desktop/coding_dojo/c#/Data_Structures/SinglyLinkedLists/bin/Debug/netcoreapp2.1/SinglyLinkedLists.runtimeconfig.dev.json
+/Users/Shea/Desktop/coding_dojo/c#/Data_Structures/SinglyLinkedLists/bin/Debug/netcoreapp2.1/SinglyLinkedLists.dll
+/Users/Shea/Desktop/coding_dojo/c#/Data_Structures/SinglyLinkedLists/bin/Debug/netcoreapp2.1/SinglyLinkedLists.pdb
+/Users/Shea/Desktop/coding_dojo/c#/Data_Structures/SinglyLinkedLists/obj/Debug/netcoreapp2.1/SinglyLinkedLists.csprojAssemblyReference.cache
+/Users/Shea/Desktop/coding_dojo/c#/Data_Structures/SinglyLinkedLists/obj/Debug/netcoreapp2.1/SinglyLinkedLists.csproj.CoreCompileInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Data_Structures/SinglyLinkedLists/obj/Debug/netcoreapp2.1/SinglyLinkedLists.AssemblyInfoInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Data_Structures/SinglyLinkedLists/obj/Debug/netcoreapp2.1/SinglyLinkedLists.AssemblyInfo.cs
+/Users/Shea/Desktop/coding_dojo/c#/Data_Structures/SinglyLinkedLists/obj/Debug/netcoreapp2.1/SinglyLinkedLists.dll
+/Users/Shea/Desktop/coding_dojo/c#/Data_Structures/SinglyLinkedLists/obj/Debug/netcoreapp2.1/SinglyLinkedLists.pdb
