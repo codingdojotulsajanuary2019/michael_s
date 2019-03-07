@@ -1,0 +1,11 @@
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/IronNinja/bin/Debug/netcoreapp2.1/IronNinja.deps.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/IronNinja/bin/Debug/netcoreapp2.1/IronNinja.runtimeconfig.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/IronNinja/bin/Debug/netcoreapp2.1/IronNinja.runtimeconfig.dev.json
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/IronNinja/bin/Debug/netcoreapp2.1/IronNinja.dll
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/IronNinja/bin/Debug/netcoreapp2.1/IronNinja.pdb
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/IronNinja/obj/Debug/netcoreapp2.1/IronNinja.csprojAssemblyReference.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/IronNinja/obj/Debug/netcoreapp2.1/IronNinja.csproj.CoreCompileInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/IronNinja/obj/Debug/netcoreapp2.1/IronNinja.AssemblyInfoInputs.cache
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/IronNinja/obj/Debug/netcoreapp2.1/IronNinja.AssemblyInfo.cs
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/IronNinja/obj/Debug/netcoreapp2.1/IronNinja.dll
+/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/IronNinja/obj/Debug/netcoreapp2.1/IronNinja.pdb
