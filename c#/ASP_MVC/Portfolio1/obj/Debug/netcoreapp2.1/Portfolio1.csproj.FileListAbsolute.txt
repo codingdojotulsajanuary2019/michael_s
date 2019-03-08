@@ -17,8 +17,9 @@
 /Users/Shea/Desktop/coding_dojo/c#/ASP_MVC/Portfolio1/obj/Debug/netcoreapp2.1/Portfolio1.TagHelpers.input.cache
 /Users/Shea/Desktop/coding_dojo/c#/ASP_MVC/Portfolio1/obj/Debug/netcoreapp2.1/Portfolio1.TagHelpers.output.cache
 /Users/Shea/Desktop/coding_dojo/c#/ASP_MVC/Portfolio1/obj/Debug/netcoreapp2.1/Portfolio1.RazorCoreGenerate.cache
-/Users/Shea/Desktop/coding_dojo/c#/ASP_MVC/Portfolio1/obj/Debug/netcoreapp2.1/Razor/Views/Portolfio/Index.g.cshtml.cs
-/Users/Shea/Desktop/coding_dojo/c#/ASP_MVC/Portfolio1/obj/Debug/netcoreapp2.1/Razor/Views/Portolfio/Projects.g.cshtml.cs
 /Users/Shea/Desktop/coding_dojo/c#/ASP_MVC/Portfolio1/obj/Debug/netcoreapp2.1/Portfolio1.RazorTargetAssemblyInfo.cs
 /Users/Shea/Desktop/coding_dojo/c#/ASP_MVC/Portfolio1/obj/Debug/netcoreapp2.1/Portfolio1.Views.pdb
 /Users/Shea/Desktop/coding_dojo/c#/ASP_MVC/Portfolio1/obj/Debug/netcoreapp2.1/Portfolio1.csproj.CopyComplete
+/Users/Shea/Desktop/coding_dojo/c#/ASP_MVC/Portfolio1/obj/Debug/netcoreapp2.1/Razor/Views/Portfolio/Index.g.cshtml.cs
+/Users/Shea/Desktop/coding_dojo/c#/ASP_MVC/Portfolio1/obj/Debug/netcoreapp2.1/Razor/Views/Portfolio/Projects.g.cshtml.cs
+/Users/Shea/Desktop/coding_dojo/c#/ASP_MVC/Portfolio1/obj/Debug/netcoreapp2.1/Razor/Views/Portfolio/Contact.g.cshtml.cs
