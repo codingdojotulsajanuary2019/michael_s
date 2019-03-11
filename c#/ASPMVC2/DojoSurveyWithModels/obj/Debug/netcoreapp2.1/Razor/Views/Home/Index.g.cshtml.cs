@@ -67,7 +67,7 @@ using DojoSurveyWithModels.Models;
             WriteLiteral("\r\n<div class=\"jumbotron\">\r\n  <h1 class=\"display-4\">Dojo Survey</h1>\r\n    ");
             EndContext();
             BeginContext(116, 1577, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6a12662026de4f9c90612d6ab04e5d5b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b6485ca2f9164cc8a1443e43959404b5", async() => {
                 BeginContext(153, 401, true);
                 WriteLiteral(@"
         <div class=""form-group"">
@@ -80,7 +80,7 @@ using DojoSurveyWithModels.Models;
                 ");
                 EndContext();
                 BeginContext(554, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4635200527564ee1891b6c76bc271694", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c89bdf599b77402a88219eac476ab468", async() => {
                     BeginContext(576, 5, true);
                     WriteLiteral("Tulsa");
                     EndContext();
@@ -102,7 +102,7 @@ using DojoSurveyWithModels.Models;
                 WriteLiteral("\r\n                ");
                 EndContext();
                 BeginContext(608, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e8a35978f2946feb31cf5e1f5a235a2", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e8a8cd4743584da6aeb8c66a127bad0d", async() => {
                     BeginContext(633, 8, true);
                     WriteLiteral("San Jose");
                     EndContext();
@@ -124,7 +124,7 @@ using DojoSurveyWithModels.Models;
                 WriteLiteral("\r\n                ");
                 EndContext();
                 BeginContext(668, 54, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9c3ba17e93d84df6845c85d995f1ab71", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "879b5def679442b2b9104515ea591b19", async() => {
                     BeginContext(699, 14, true);
                     WriteLiteral("Silicon Valley");
                     EndContext();
@@ -146,7 +146,7 @@ using DojoSurveyWithModels.Models;
                 WriteLiteral("\r\n                ");
                 EndContext();
                 BeginContext(740, 39, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1df3fc18bb224aafb6b017c2545c3e79", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "705aeb7233834ac6898eb42e2d999b41", async() => {
                     BeginContext(764, 6, true);
                     WriteLiteral("Seatle");
                     EndContext();
@@ -168,7 +168,7 @@ using DojoSurveyWithModels.Models;
                 WriteLiteral("\r\n                ");
                 EndContext();
                 BeginContext(797, 38, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c5ae5e48cabf4233b99e4d1286242359", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c0144ee951f5492e8c73c8bee3fc9d8d", async() => {
                     BeginContext(820, 6, true);
                     WriteLiteral("Dallas");
                     EndContext();
@@ -190,7 +190,7 @@ using DojoSurveyWithModels.Models;
                 WriteLiteral("\r\n            </select>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"Language\">Favorite Language</label>\r\n            <select name=\"Language\" class=\"form-control\" id=\"exampleFormControlSelect1\">\r\n                ");
                 EndContext();
                 BeginContext(1077, 38, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5beefb420fc94ddb82a5ec1bceb4eea5", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d56ab108d9104d189e9ac0595421ac11", async() => {
                     BeginContext(1100, 6, true);
                     WriteLiteral("Python");
                     EndContext();
@@ -212,7 +212,7 @@ using DojoSurveyWithModels.Models;
                 WriteLiteral("\r\n                ");
                 EndContext();
                 BeginContext(1133, 30, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "837394fc6c1545eab74aa5481f51a4e4", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "67a01f088f024df2ae5e00f459ac7dae", async() => {
                     BeginContext(1152, 2, true);
                     WriteLiteral("C#");
                     EndContext();
@@ -234,7 +234,7 @@ using DojoSurveyWithModels.Models;
                 WriteLiteral("\r\n                ");
                 EndContext();
                 BeginContext(1181, 46, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f2b97273e1454e26bd3e214a2b296ea1", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a1809b07dcca4a15976707e11df1b0bf", async() => {
                     BeginContext(1208, 10, true);
                     WriteLiteral("JavaScript");
                     EndContext();
@@ -256,7 +256,7 @@ using DojoSurveyWithModels.Models;
                 WriteLiteral("\r\n                ");
                 EndContext();
                 BeginContext(1245, 46, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "89e0322a920e405991f319e11fb5fe5e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f7b65acd436348be8f32b65bdab670cc", async() => {
                     BeginContext(1272, 10, true);
                     WriteLiteral("TypeScript");
                     EndContext();
@@ -278,7 +278,7 @@ using DojoSurveyWithModels.Models;
                 WriteLiteral("\r\n                ");
                 EndContext();
                 BeginContext(1309, 34, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6f593bce86b84232bb7abc8b2f2030b8", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc761fc8e7b449a6bacbaa30e5aba7da", async() => {
                     BeginContext(1330, 4, true);
                     WriteLiteral("HTML");
                     EndContext();

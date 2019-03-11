@@ -21,6 +21,12 @@ namespace DojoSurveyWithModels.Controllers
         public IActionResult Submit(Survey MySurvey)
         {
 
+            return RedirectToAction("Result", MySurvey);
+        }
+
+        [HttpGet("Result")]
+        public IActionResult Result(Survey MySurvey)
+        {
             return View("Result", MySurvey);
         }
 
