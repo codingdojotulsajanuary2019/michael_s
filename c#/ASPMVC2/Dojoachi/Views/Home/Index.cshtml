@@ -1,0 +1,30 @@
+﻿<div class="jumbotron">
+    <h1 class="display-4 text-center">DOGOACHI</h1>
+    <p class="lead text-center">This is your Dogoachi...... Keep him happy or it Will be killed by Kunle "The Dictator"</p>
+    <hr class="my-4">
+    <div class="container text-center mb-2">
+        <div class="container">
+            <h5>
+                <span class="text-primary">Happiness: </span>@ViewBag.Happiness |  
+                <span class="text-primary">Fullness: </span>@ViewBag.Fullness  | 
+                <span class="text-primary">Meals: </span>@ViewBag.Meals  | 
+                <span class="text-primary">Energy: </span>@ViewBag.Energy 
+            </h5>
+        </div>
+
+        <img src="~/images/dogstart.jpg" alt="Dogoachi" height="300" width="500">
+
+    </div>
+    <div class="container">
+        <h5 class="text-center">@ViewBag.Message</h5>
+    </div>
+
+    <hr class="my-4">
+    <div class="container offset-2">
+        <a class="btn btn-outline-primary col-2" href="/feed" role="button">Feed</a>
+        <a class="btn btn-outline-primary col-2" href="/play" role="button">Play</a>
+        <a class="btn btn-outline-primary col-2" href="/work" role="button">Work</a>
+        <a class="btn btn-outline-primary col-2" href="/sleep" role="button">Sleep</a>
+    </div>
+
+</div>
