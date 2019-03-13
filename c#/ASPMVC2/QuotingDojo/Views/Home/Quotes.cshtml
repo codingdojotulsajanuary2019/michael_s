@@ -1,0 +1,13 @@
+<h1 class="text-white text-center">Here are the AWESOME Quotes!</h1>
+<a class="btn btn-primary mb-5" href="/" role="button">Back</a>
+@{
+    foreach(var quote in @ViewBag.Quotes)
+        {
+        <div class="card mb-2">
+            <div class="card-body">
+                <p>"@quote["quote"]"</p>
+                <small> - @quote["name"] (@quote["create_at"]) </small>
+            </div>
+        </div>
+        }
+}

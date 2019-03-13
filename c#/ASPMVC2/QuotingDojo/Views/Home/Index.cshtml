@@ -1,0 +1,24 @@
+﻿@model QuotingDojo.Models.Quotes
+
+<div class="jumbotron">
+    <h1 class="display-4 text-center">Welcome To Quoting Dojo</h1>
+    <hr class="my-4">
+    <div class="container">
+        <form asp-action="Submit" asp-controller="Home" method="POST">
+            <div class="form-group">
+                <label asp-for="Name">Your Name:</label>
+                <input asp-for="Name" type="text" class="form-control col-10" placeholder="Your Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quote">Your Quote:</label>
+                <textarea asp-for="Quote"class="form-control col-10" rows="3"></textarea>
+                <span asp-validation-for="Quote" class = "text-danger"></span>
+            </div>
+            <div class="container offset-5">
+                <button class="btn btn-outline-primary mr-5" type="submit">Add Quote</button>
+                <a class="btn btn-outline-primary" href="/quotes" role="button">View Quotes</a>
+            </div>
+        </form>
+    </div>
+</div>
