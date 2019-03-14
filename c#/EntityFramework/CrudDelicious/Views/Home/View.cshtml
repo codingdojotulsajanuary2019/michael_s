@@ -1,0 +1,14 @@
+@model CrudDelicious.Models.Dish
+
+<div class="jumbotron text-center">
+  <h1 class="display-4">@Model.Name</h1>
+  <h3>Chef: <span class="text-info">@Model.Chef</span></h3>
+  <hr class="my-4">
+  <p>@Model.Description</p>
+  <h5>Calories: @Model.Calories</h5>
+  <h5>Tastiness: @Model.Tastiness</h5>
+  <p class="lead">
+    <a class="btn btn-info btn-lg" href="/" role="button">All Dishes</a>
+    <a class="btn btn-info btn-lg" href="/edit/@Model.DishID" role="button">Edit Dish</a>
+  </p>
+</div>

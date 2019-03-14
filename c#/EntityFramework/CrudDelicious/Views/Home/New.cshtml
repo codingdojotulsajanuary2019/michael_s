@@ -1,0 +1,43 @@
+@model CrudDelicious.Models.Dish;
+
+<div class="jumbotron">
+    <h1 class="display-4 text-center">Add A Dish</h1>
+    <p class="lead">
+        <a class="btn btn-info btn" href="/" role="button">Home</a>
+    </p>
+    <hr class="my-4">
+    <form class="container offset-2" asp-action="CreateNewDish" asp-controller="Home" method="POST">
+        <div class="form-group">
+          <label asp-for="Chef"></label>
+          <input asp-for="Chef" type="text" class="form-control col-8"placeholder="Gordon Ramsey">
+          <span asp-validation-for="Chef" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+          <label asp-for="Name"></label>
+          <input asp-for="Name" class="form-control col-8"placeholder="Can you smell what the Rock is Cookin?">
+          <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+          <label asp-for="Calories"></label>
+          <input asp-for="Calories" class="form-control col-8"placeholder="Calories">
+          <span asp-validation-for="Calories" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+          <label asp-for="Tastiness"></label>
+          <select asp-for="Tastiness" class="form-control col-1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label asp-for="Description"></label>
+          <textarea asp-for="Description" class="form-control col-8" rows="3" placeholder="Describe your Dish!"></textarea>
+          <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <button class="btn btn-info" type="submit">Add Dish</button>
+    </form>
+
+</div>
