@@ -1,0 +1,35 @@
+@model ViewModel
+<nav aria-label="breadcrumb text-center">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Chefs</a></li>
+    <li class="breadcrumb-item" aria-current="page">Dishes</li>
+    <a class="btn btn-primary offset-9" href="/dishes/new" role="button">Add a Dish</a>
+  </ol>
+</nav>
+<div class="jumbotron">
+  <h1 class="display-4 text-center">Dishes</h1>
+  <p class="lead text-center">Yum, take a look at our tasty dishes!<p>
+  <hr class="my-4">
+    <table class="table">
+        <thead class="thead-dark text-center">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Chef</th>
+            <th scope="col">Tastiness</th>
+            <th scope="col">Calories</th>
+        </tr>
+        </thead>
+        <tbody class="text-center">
+        @{ foreach(var dish in Model.AllDishes)
+            {
+                <tr>
+                    <th>@dish.Name</th>
+                    <td>@dish.Creator.FirstName @dish.Creator.LastName</td>
+                    <td>@dish.Tastiness</td>
+                    <td>@dish.Calories</td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+</div>

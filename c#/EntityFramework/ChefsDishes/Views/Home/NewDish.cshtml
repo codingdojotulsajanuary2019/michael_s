@@ -1,0 +1,54 @@
+@model ViewModel
+<div class="jumbotron">
+  <h1 class="display-4 text-center">Add A Dish</h1>
+  <a class="btn btn-primary offset-11" href="/" role="button">Home</a>
+  <hr class="my-4">
+  <form action="/dishes/add" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label asp-for="ThisDish.Name"></label>
+            <input asp-for="ThisDish.Name" class="form-control" placeholder="Name of Dish">
+            <span class="text-danger" asp-validation-for="ThisDish.Name"></span>
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="ThisDish.ChefId">Chef</label>
+            <span class="text-danger" asp-validation-for="ThisDish.ChefId"></span>
+            <select class="form-control" asp-for="ThisDish.ChefId">
+            <option disabled selected>Name of Chef</option>
+            @{foreach(var chef in Model.AllChefs)
+                {
+                    <option value="@chef.ChefId">@chef.FirstName @chef.LastName</option>
+
+                }
+            }
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label asp-for="ThisDish.Tastiness">Tastiness</label>
+            <span class="text-danger" asp-validation-for="ThisDish.Tastiness"></span>
+            <select class="form-control" asp-for="ThisDish.Tastiness">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="ThisDish.Calories"># of Calories</label>
+            <input class="form-control" asp-for="ThisDish.Calories" placeholder="Calories">
+            <span class="text-danger" asp-validation-for="ThisDish.Calories"></span>
+        </div>
+    </div>
+    <div class="form-row">
+          <div class="form-group col-md-8">
+            <label asp-for="ThisDish.Description">Description</label>
+            <textarea class="form-control" asp-for="ThisDish.Description" rows="3" placeholder="Describe the dish"></textarea>
+            <span class="text-danger" asp-validation-for="ThisDish.Description"></span>
+        </div>
+    </div>
+  <button type="submit" class="btn btn-primary">Add Dish</button>
+</form>
+</div>
