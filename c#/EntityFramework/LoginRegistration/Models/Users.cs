@@ -27,7 +27,7 @@ namespace LoginRegistration.Models
 
         [Display(Name="Password")]
         [Required(ErrorMessage="Password cannot be empty")]
-        [MinLength(8, ErrorMessage="Last Name must be longer than 8 characters")]
+        [MinLength(8, ErrorMessage="Password must be 8 Characters or Longer!")]
         public string Password {get; set;}
 
         [NotMapped]
@@ -39,5 +39,7 @@ namespace LoginRegistration.Models
         public DateTime UpdatedAt {get; set;} = DateTime.Now;
        
     }
+
+    
 
 }

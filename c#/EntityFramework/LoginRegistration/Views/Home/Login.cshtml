@@ -1,17 +1,18 @@
-@model LoginRegistration.Models.User
+@model LoginUser
 
 <div class="jumbotron col-6 bg-transparent text-white offset-7">
     <h1 class="text-left">Login</h1>
     <small id="emailHelp" class="form-text text-muted">Not Registered? <a href="/">Register</a></small>
-    <form asp-action="login" asp-controller="Home" method="post">
+    <form action="/login/submit" method="post">
         <div class="form-group">
             <label asp-for="Email"></label>
             <input asp-for="Email" class="form-control col-10" placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <span asp-validation-for="Email" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label asp-for="Password"></label>
-            <input asp-for="Password" class="form-control col-10" placeholder="Password">
+            <input type="password" asp-for="Password" class="form-control col-10" placeholder="Password">
         </div>
         <button class="btn btn-primary" type="submit">Login</button>
 

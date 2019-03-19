@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using LoginRegistration.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
 
 namespace LoginRegistration.Controllers
 {
@@ -24,12 +25,14 @@ namespace LoginRegistration.Controllers
         {
             return View("Register");
         }
+
+
         [HttpPost("register")]
-        public IActionResult Register(User input)
+        public IActionResult Register(User user)
         {
             if(ModelState.IsValid)
             {
-                if(dbContext.Users.Any(u => u.Email == input.Email))
+                if(dbContext.Users.Any(u => u.Email == user.Email))
                 {
                     ModelState.AddModelError("Email", "Email already taken");
                     return View("Register");
@@ -37,11 +40,11 @@ namespace LoginRegistration.Controllers
                 else
                 {
                     PasswordHasher<User> Hasher = new PasswordHasher<User>();
-                    input.Password = Hasher.HashPassword(input, input.Password);
-                    dbContext.Add(input);
+                    user.Password = Hasher.HashPassword(user, user.Password);
+                    dbContext.Add(user);
                     dbContext.SaveChanges();
 
-                    return Redirect("Success");
+                    return RedirectToAction("Success");
                 }
             }
             else
@@ -51,7 +54,13 @@ namespace LoginRegistration.Controllers
         }
 
         [HttpGet("login")]
-        public IActionResult Login(User input)
+        public IActionResult ShowLogin()
+        {
+            return View("Login");
+        }
+
+        [HttpPost("login/submit")]
+        public IActionResult Login(LoginUser input)
         {
             if(ModelState.IsValid)
             {
@@ -61,25 +70,45 @@ namespace LoginRegistration.Controllers
                     ModelState.AddModelError("Email", "Invalid Email/Password");
                     return View("Login");
                 }
-                var hasher = new PasswordHasher<User>();
+                var hasher = new PasswordHasher<LoginUser>();
                 var result = hasher.VerifyHashedPassword(input, userindb.Password, input.Password);
 
                 if(result ==0)
                 {
-                    ModelState.AddModelError("Email", "Email/Password does not exist");
+                    ModelState.AddModelError("Email", "Incorrect Email/Password ");
                     return View("Login");
 
                 }
-                return View("Success");
+                else
+                {
+                    int GetUserId = userindb.UserId;
+                    string GetUserFirstName = userindb.FirstName;
+                    HttpContext.Session.SetInt32("UserId", GetUserId);
+                    HttpContext.Session.SetString("FirstName", GetUserFirstName);
+                    return RedirectToAction("Success");
+                }
             }
-            return View("Login");
+            else
+            {
+                return View("Login");
+            }
         }
 
-        [HttpGet("Success")]
+        [HttpGet("success")]
         public IActionResult Success()
         {
+            int? IsIdInSession = HttpContext.Session.GetInt32("UserId");
+            if(IsIdInSession == null)
+            {
+                return RedirectToAction("ShowLogin");
+            }
+            else 
+            {
+                string UserFirstName = HttpContext.Session.GetString("FirstName");
+                ViewBag.FirstName = UserFirstName;
+                return View("Success");
+            }
 
-            return View("Success");
         }
 
     }
