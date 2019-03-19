@@ -1,0 +1,51 @@
+@model ViewModel
+<div class="jumbotron">
+  <h1 class="display-5 text-center">Welcome To Your Bank Account, @Model.ThisUser.FirstName</h1>
+  <h3 class="text-center">Your Current Balance Is:</h3>
+    <div class="card col-5 text-center container">
+        <div class="card-body">
+         <h3>@Model.ThisUser.Balance.ToString("C2")</h3>
+        </div>
+    </div>
+    <form action="account/transaction" method="post" class="col-3 container text-center">
+        <div class="form-group">
+            <label asp-for="transaction.Amount">Deposit/Withdraw Amount"</label>
+            <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+            <input asp-for="transaction.Amount" class="form-control"placeholder="Enter Amount">
+            </div>
+            <span asp-validation-for="transaction.Amount" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  <hr class="my-4">
+    <table class="table table-striped text-center col-8 container">
+        <thead>
+            <tr>
+            <th scope="col">Amount</th>
+            <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach(Transaction trans in Model.ThisUser.UserTransactions)
+                {
+                    if(@trans.Amount < 0)
+                    {
+                        <tr class="text-danger">
+                            <th>@trans.Amount.ToString("C2")</th>
+                            <td>@trans.CreatedAt.ToString("MM/dd/yyy hh:mm tt")</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            <th>@trans.Amount.ToString("C2")</th>
+                            <td>@trans.CreatedAt.ToString("MM/dd/yyy hh:mm tt")</td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</div>
