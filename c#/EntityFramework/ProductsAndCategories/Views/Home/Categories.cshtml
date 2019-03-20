@@ -1,0 +1,39 @@
+@model ViewModel
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item activate" aria-current="page"><a href="/products">Products</a></li>
+    <li class="breadcrumb-item" aria-current="page">Categories</li>
+  </ol>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+            <h1 class="display-4 text-center">Add New Category</h1>
+            <hr class="my-4">
+                <form class="col-11" action="/categories/add" method="post">
+                    <div class="form-group">
+                        <label asp-for="NewCategory.Name">Name</label>
+                        <input asp-for="NewCategory.Name" class="form-control" placeholder="Enter A Category">
+                    </div>
+                    <button class="btn btn-outline-info" type="submit">Create</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="jumbotron">
+            <h1 class="display-4 text-center">Existing Categories</h1>
+            <hr class="my-4">
+            @{
+                foreach(Category category in Model.AllCategories)
+                {
+                    <p><a href="/categories/@category.CategoryId">@category.Name</a></p>
+                }
+            }
+            </div>
+        
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿@model ViewModel
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Products</li>
+    <li class="breadcrumb-item" aria-current="page"><a href="/categories">Categories</a></li>
+  </ol>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+                <h1 class="display-4 text-center">Add New Product</h1>
+                <hr class="my-4">
+                <form class="col-11" action="/products/add" method="post">
+                    <div class="form-group">
+                        <label asp-for="NewProduct.Name">Name</label>
+                        <input asp-for="NewProduct.Name" class="form-control" placeholder="Enter Product Name">
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NewProduct.Description">Product Description</label>
+                        <textarea asp-for="NewProduct.Description" class="form-control" rows="3" placeholder="Product Description"></textarea>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input asp-for="NewProduct.Price" class="form-control" placeholder="0.00">
+                    </div>
+                    <button class="btn btn-outline-info" type="submit">Add Product</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="jumbotron">
+                <h1 class="display-4 text-center">Existing Products</h1>
+                <hr class="my-4">
+                @{
+                    foreach(Product product in Model.AllProducts)
+                    {
+                        <p><a href="products/@product.ProductId">@product.Name</a></p>
+                    }
+                }
+            </div>
+        
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+@model ViewModel
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page"><a href="/products">Products</a></li>
+    <li class="breadcrumb-item" aria-current="page"><a href="/categories">Categories</a></li>
+  </ol>
+</nav>
+<div class="jumbotron">
+    <h1 class="display-4 text-center">@Model.ViewCategory.Name</h1>
+    <hr class="my-4">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h3>Products</h3>
+                <ul class="text-left">
+                @{
+                    foreach(var ass in Model.ViewCategory.CategoryProducts)
+                    {
+                        <li>@ass.Product.Name</li>
+
+                    }
+                }
+                    
+                </ul>
+            </div>
+            <div class="col text-center">
+                <h3>Add a Product</h3>
+                <form action="/categories/addproduct" method="post">
+                    <div class="form-group col-10 offset-2">
+                        <label asp-for="NewAssociation.ProductId"></label>
+                        <select asp-for="NewAssociation.ProductId" class="form-control" id="exampleFormControlSelect1">
+                        @{
+                            foreach(Product product in Model.AllProducts)
+                            {
+                                <option value="@product.ProductId">@product.Name</option>
+                            }
+                        }
+                        </select>
+                    </div>
+                    <button class="btn btn-outline-info offset-8" type="submit">Add Product</button>
+                    <input asp-for="NewAssociation.CategoryId" type="hidden" value="@Model.ViewCategory.CategoryId">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
