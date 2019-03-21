@@ -1,0 +1,23 @@
+@model WeddingViewModel
+    
+    <div class="navbar navbar-dark text-white mb-5 ">
+        <!-- Navbar content -->
+        <h1>Check out this Wedding, @ViewBag.FirstName</h1>
+        <a class="btn btn-outline-info offset-1" href="/dashboard" role="button">Dashboard</a>
+        <a class="btn btn-outline-info" href="/logout" role="button">Logout</a>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-4">@Model.ThisWedding.Wedder1 & @Model.ThisWedding.Wedder2 's Wedding</h1>
+        <hr class="my-4">
+        <h3>Date: @Model.ThisWedding.Date</h3>
+        <h3>Guests: </h3>
+            <ul>
+                @{
+                    foreach(var guest in Model.ThisWedding.Guests)
+                    {
+                        <li>@guest.Guest.FirstName @guest.Guest.LastName</li>
+                    }
+                }
+
+            </ul>
+    </div>

@@ -1,0 +1,39 @@
+1. Start new project - dotnet new Dojo
+
+2. run - dotnet add package Pomelo.EntityFrameworkCore.Mysql 2.1.2
+
+3. create MyContext.cs file
+
+4. in MyContext.cs 
+
+    using Microsoft.EntityFrameworkCore;
+ 
+    namespace YourNamespace.Models
+    {
+        public class MyContext : DbContext
+        {
+            // base() calls the parent class' constructor passing the "options" parameter along
+            public MyContext(DbContextOptions options) : base(options) { }
+        }
+    }
+
+5. Change any db settings in your Application Json config file
+
+6.   ADD to startup file - services.AddDbContext<MyContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
+            // Add other services
+
+7. ADD - DbSet<> TableName {get; set;} to My Context to before migrations
+
+8. RUN -  dotnet ef migrations add YourMigrationName
+
+9. RUN - dotnet ef database update
+
+10. ADD To Controller - 
+
+        private MyContext dbContext;
+     
+        // here we can "inject" our context service into the constructor
+        public HomeController(MyContext context)
+        {
+            dbContext = context;
+        }
