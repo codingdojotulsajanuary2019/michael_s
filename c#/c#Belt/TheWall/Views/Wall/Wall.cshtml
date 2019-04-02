@@ -1,0 +1,16 @@
+@model WallViewModel
+
+<nav class="nav bg-secondary p-2 text-white">
+  <h3>The Dojo Wall</h3>
+  <h4 class="offset-6 pt-1">Welcome, @ViewBag.FirstName</h4>
+  <a class="btn btn-outline-light offset-1" href="/logout" role="button">Logout</a>
+</nav>
+<form action="/wall/post" method="POST" class="container col-8 mt-3">
+    <div class="form-group">
+      <label asp-for="NewMessage.UserMessage" class="text-white"></label>
+      <textarea asp-for="NewMessage.UserMessage" class="form-control" rows="3" placeholder="Hi, @ViewBag.FirstName What's On Your Mind?"></textarea>
+      <span asp-validation-for="NewMessage.UserMessage" class="text-danger"></span>
+    </div>
+    <button class="btn btn-outline-light offset-10" type="submit">Make Post</button>
+    <input type="hidden" asp-for="NewMessage.UserId" value="@ViewBag.UserId">
+</form>

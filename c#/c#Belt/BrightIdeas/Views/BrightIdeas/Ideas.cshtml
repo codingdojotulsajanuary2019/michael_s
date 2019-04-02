@@ -1,0 +1,40 @@
+@model BrightIdeaVM
+<nav class="nav bg-secondary p-2 text-white">
+  <h3 class="ml-2">Bright Ideas</h3>
+  <h4 class="offset-3 pt-1">Welcome, @Model.ThisUser.Name</h4>
+  <a class="btn btn-outline-light offset-1" href="/logout" role="button">Logout</a>
+</nav>
+<div class="col-6 container jumbotron mt-2">
+  <form action="/brightideas/create" method="POST">
+      <div class="form-group">
+        <label asp-for="NewIdea.Idea">Bright Idea</label>
+        <textarea asp-for="NewIdea.Idea" class="form-control" rows="3" placeholder="post something witty here..."></textarea>
+        <span asp-validation-for="NewIdea.Idea" class="text-danger"></span>
+    </div>
+    <input type="hidden" asp-for="NewIdea.UserId" value="@Model.ThisUser.UserId">
+    <button class="btn btn-primary" type="submit">Add Idea</button>
+  </form>
+</div>
+
+<div class="col-6 container mt-4">
+  @{
+    foreach(var Idea in Model.AllIdeas)
+    {
+      <p class="text-white"><a href="brightideas/users/@Idea.Creator.UserId">@Idea.Creator.Alias</a> Says:</p>
+      <div class="card">
+          <div class="card-body">
+          "@Idea.Idea"
+          </div>
+          
+          <p class="ml-4">
+            <a href="/brightideas/like/@Idea.IdeaId/@Model.ThisUser.UserId">Like</a><span class="ml-3">   </span>
+            <a href="/brightideas/@Idea.IdeaId/@Idea.Creator.UserId">@Idea.Likes.Count Users</a>Like This
+          </p>
+      </div>
+              if(@Idea.Creator.UserId == @Model.ThisUser.UserId)
+              {
+                <a class="btn-sm btn-primary offset-10" href="/brightideas/delete/@Idea.IdeaId" role="button">Delete</a>
+              }
+    }
+  }
+</div>

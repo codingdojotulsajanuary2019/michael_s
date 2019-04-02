@@ -1,0 +1,33 @@
+@model BrightIdeaVM
+<nav class="nav bg-secondary p-2 text-white">
+  <h3 class="ml-2">Bright Ideas</h3>
+  <a class="btn btn-outline-light offset-8" href="/brightideas" role="button">Bright Ideas</a>
+  <a class="btn btn-outline-light ml-1" href="/logout" role="button">Logout</a>
+</nav>
+<div class="col-6 container jumbotron mt-2">
+    <p class=""><a href="/brightideas/users/@Model.ThisUser.UserId">@Model.ThisUser.Alias</a> Says:</p>
+        <div class="card-body">
+          "@Model.GetIdea.Idea""
+        </div>
+    <hr>
+    <p>People Who like this idea:</p>
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th scope="col">Alias</th>
+          <th scope="col">Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        @{
+          foreach(var like in Model.GetIdea.Likes)
+          {
+            <tr>
+              <th><a href="/brightideas/users/@like.Liker.UserId">@like.Liker.Alias</a></th>
+              <td>@like.Liker.Name</td>
+            </tr>
+          }
+
+        }
+    </table>
+</div>

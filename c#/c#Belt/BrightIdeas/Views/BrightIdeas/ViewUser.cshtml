@@ -1,0 +1,11 @@
+@model BrightIdeaVM
+<nav class="nav bg-secondary p-2 text-white">
+  <h3 class="ml-2">Bright Ideas</h3>
+  <a class="btn btn-outline-light offset-8" href="/brightideas" role="button">Bright Ideas</a>
+  <a class="btn btn-outline-light ml-1" href="/logout" role="button">Logout</a>
+</nav>
+<div class="col-6 container jumbotron mt-2">
+    <h3>Name: @Model.ThisUser.Name</h3>
+    <h3>Alias: @Model.ThisUser.Alias</h3>
+    <h3>Email: @Model.ThisUser.Email</h3>
+</div>

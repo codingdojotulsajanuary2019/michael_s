@@ -1,0 +1,61 @@
+﻿@model LoginViewModel
+
+<div class="container">
+    <div class="row">
+        <!-- REGISTRATION -->
+        <div class="col">
+            <div class="jumbotron col-10 bg-transparent text-white">
+                <h1 class="text-left">Register</h1>
+                <form action="/register" method="post">
+                    <div class="form-group">
+                        <label asp-for="User.FirstName"></label>
+                        <input asp-for="User.FirstName" class="form-control col-10" placeholder="First Name">
+                        <span asp-validation-for="User.FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="User.LastName"></label>
+                        <input asp-for="User.LastName" class="form-control col-10" placeholder="Last Name">
+                        <span asp-validation-for="User.LastName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="User.Email"></label>
+                        <input asp-for="User.Email" class="form-control col-10" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <span asp-validation-for="User.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="User.Password"></label>
+                        <input asp-for="User.Password" class="form-control col-10" type="password" placeholder="Password">
+                        <span asp-validation-for="User.Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="User.PWConfirm"></label>
+                        <input asp-for="User.PWConfirm" class="form-control col-10 border rounded"  type="password" placeholder="Password">
+                        <span asp-validation-for="User.PWConfirm" class="text-danger"></span>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Sign Up!</button>
+                </form>
+            </div>
+        </div>
+        <!-- LOGIN -->
+        <div class="col">
+            <div class="jumbotron col-10 bg-transparent text-white">
+                <h1 class="text-left">Login</h1>
+                <form action="/login" method="post">
+                    <div class="form-group">
+                        <label asp-for="LoginUser.Email"></label>
+                        <input asp-for="LoginUser.Email" class="form-control col-10" placeholder="Email">
+                        <span asp-validation-for="LoginUser.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LoginUser.Password"></label>
+                        <input type="password" asp-for="LoginUser.Password" class="form-control col-10" placeholder="Password">
+                        <span asp-validation-for="LoginUser.Password" class="text-danger"></span>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

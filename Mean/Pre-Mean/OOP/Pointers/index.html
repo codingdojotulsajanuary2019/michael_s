@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="Pointers.js"></script>
+    <title>Traveling</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Move(direction)
+    {
+        if(direction === "North")
+        {
+            if(player.location.North)
+            {   
+                player.location = player.location.North;
+                console.log(`You are now at ${player.location.name}'s House!`);
+                console.log(player.location.greet());
+            }
+            else
+            {
+                console.log("You cannot go that way")
+            }
+        };
+        if(direction === "South")
+        {
+            if(player.location.South)
+            {
+                player.location = player.location.South;
+                console.log(`You are now at ${player.location.name}'s House!`);
+                console.log(player.location.greet());
+            }
+            else
+            {
+                console.log("You cannot go that way")
+            }
+        }
+        if(direction === "East")
+        {
+            if(player.location.East)
+            {
+                player.location = player.location.East;
+                console.log(`You are now at ${player.location.name}'s House!`);
+                console.log(player.location.greet());
+            }
+            else
+            {
+                console.log("You cannot go that way")
+            }
+        }
+        if(direction === "West")
+        {
+            if(player.location.West)
+            {
+                player.location = player.location.West;
+                console.log(`You are now at ${player.location.name}'s House!`);
+                console.log(player.location.greet());
+            }
+            else
+            {
+                console.log("You cannot go that way")
+            }
+        }
+
+    }
+    function Pickup()
+    {
+        if(player.location === Bees)
+        {
+            player.honey = true;
+            console.log("You've gathered the honey!");
+            console.log(`Now take the honey to ${player.mission.name}'s House!`);
+        }
+        else
+        {
+            console.log("There is no honey at this location");
+        }
+    }
+    function Drop()
+    {
+        if(player.location === player.mission)
+        {
+            console.log(`Congrats! You have delivered the honey to ${player.mission.name}'s house!`);
+        }
+        if(player.location !== player.mission)
+        {
+            console.log("Whoops! This isn't the place that needs the honey.");
+        }
+    }
+</script>
+</html>
