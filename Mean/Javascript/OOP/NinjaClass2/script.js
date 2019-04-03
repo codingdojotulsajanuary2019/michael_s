@@ -34,7 +34,7 @@ function Ninja(name)
         console.log(amount);
         target.health -= amount;
         console.log(`In this case ${target.name} lost ${amount} health because ${this.name} has ${strength} of strength`);
-    }
+    };
 
 
 
