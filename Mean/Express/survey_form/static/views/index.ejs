@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Survey Form</title>
+</head>
+<body class="blue darken-4">
+    <div class="container l8 center-align">
+        <h1 class="white-text">Survey Form</h1>
+        <div class="row">
+            <form class="col s12" action='/result' method="POST">
+                <div class="row">
+                        <div class="input-field col l6">
+                            <input name="first_name" placeholder="First Name" id="first_name" type="text" class="validate white-text">
+                            <label for="first_name"></label>
+                        </div>
+                        <div class="input-field col l6">
+                            <input name="last_name" placeholder="Last Name"id="last_name" type="text" class="validate white-text">
+                            <label for="last_name"></label>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l6">
+                        <select name="location">
+                            <option value="" disabled selected>Select Location</option>
+                            <option value="Tulsa">Tulsa</option>
+                            <option value="San Jose">San Jose</option>
+                            <option value="Silicon Valley">Silicon Valley</option>
+                            <option value="Dallas">Dallas</option>
+                            <option value="Seattle">Seattle</option>
+                        </select>
+                        <label class="white-text">Dojo Location</label>
+                    </div>
+                    <div class="input-field col l6">
+                        <select name="language">
+                            <option value="" disabled selected>Select Language</option>
+                            <option value="Python">Python</option>
+                            <option value="C#/ASP.Net">C#/ASP.Net</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Java">Java</option>
+                            <option value="Swift">Swift</option>
+                        </select>
+                        <label class="white-text">Favorite Language</label>
+                    </div>
+                </div>
+                <div class="row white-text">
+                        <div class="input-field col l12 center-align">
+                            <textarea name="comments" id="textarea1" class="materialize-textarea white-text" placeholder="Your Comments"></textarea>
+                            <label class="white-text"  for="textarea1">Comments</label>
+                        </div>
+                </div>
+                <div class="row l10 container">
+                    <button class="btn waves-effect waves-light left" type="submit" name="action" value="Submit Form">Submit
+                            <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+                
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('select').formSelect();
+        });
+    </script>
+
+</body>
+</html>
