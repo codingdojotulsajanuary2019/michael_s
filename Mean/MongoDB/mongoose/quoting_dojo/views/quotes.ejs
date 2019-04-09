@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Quoting Dojo - Quotes</title>
+</head>
+<body class="bg-dark">
+        <div class="jumbotron container col-8 mt-4">
+            <h1 class="display-4 text-center">Here Are The Quotes</h1>
+            <a class="btn btn-primary offset-5" href="/" role="button">Home</a>
+            <hr class="my-4">
+            <% for(var quote in quotes){ %>
+                <div class="card">
+                    <div class="card-body">
+                      <p class="text-left">"<%= quotes[quote].quote %>"</p>
+                      <p class="font-italic text-center text-primary"> - <%= quotes[quote].name %> at <%= quotes[quote].createdAt.toDateString() %> </p>
+                    </div>
+                </div>
+            <% } %>
+
+        </div>
+    
+</body>
+</html>
