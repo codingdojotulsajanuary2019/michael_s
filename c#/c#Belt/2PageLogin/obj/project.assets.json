@@ -11581,11 +11581,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Shea/Desktop/2PageLogin/2PageLogin.csproj",
+      "projectUniqueName": "/Users/Shea/Desktop/coding_dojo/c#/c#Belt/2PageLogin/2PageLogin.csproj",
       "projectName": "2PageLogin",
-      "projectPath": "/Users/Shea/Desktop/2PageLogin/2PageLogin.csproj",
+      "projectPath": "/Users/Shea/Desktop/coding_dojo/c#/c#Belt/2PageLogin/2PageLogin.csproj",
       "packagesPath": "/Users/Shea/.nuget/packages/",
-      "outputPath": "/Users/Shea/Desktop/2PageLogin/obj/",
+      "outputPath": "/Users/Shea/Desktop/coding_dojo/c#/c#Belt/2PageLogin/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

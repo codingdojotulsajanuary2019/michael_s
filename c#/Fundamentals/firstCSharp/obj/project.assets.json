@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Shea/Desktop/coding_dojo/c#/firstCSharp/firstCSharp.csproj",
+      "projectUniqueName": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/firstCSharp/firstCSharp.csproj",
       "projectName": "firstCSharp",
-      "projectPath": "/Users/Shea/Desktop/coding_dojo/c#/firstCSharp/firstCSharp.csproj",
+      "projectPath": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/firstCSharp/firstCSharp.csproj",
       "packagesPath": "/Users/Shea/.nuget/packages/",
-      "outputPath": "/Users/Shea/Desktop/coding_dojo/c#/firstCSharp/obj/",
+      "outputPath": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/firstCSharp/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

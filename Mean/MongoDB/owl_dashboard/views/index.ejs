@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Owl Dashboard</title>
+</head>
+<body class='bg-dark'>
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/owls/new">Add Owl</a>
+        </li>
+    </ul>
+    <h1 class='text-light text-center mt-2'>Welcome to The Owl Dashboard!</h1>
+    <table class="table table-striped text-white col-10 container text-center">
+            <thead>
+              <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Owl Type</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% for(var x in owls) {%>
+                    <tr>
+                        <th><%= owls[x].first_Name %></th>
+                        <td><%= owls[x].last_Name %></td>
+                        <td><%= owls[x].type %></td>
+                        <td>
+                            <a href="/owls/<%= owls[x]._id %>">View</a>
+                            <span> / </span>
+                            <a href="/owls/edit/<%= owls[x]._id %>">Edit</a>
+                            <span> / </span>
+                            <a href="/owls/destroy/<%= owls[x]._id %>">Delete</a>
+                        </td>
+                    </tr>
+                <% }%>
+            </tbody>
+          </table>
+</body>
+</html>

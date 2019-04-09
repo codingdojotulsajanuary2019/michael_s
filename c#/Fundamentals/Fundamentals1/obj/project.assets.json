@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals1/Fundamentals1.csproj",
+      "projectUniqueName": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Fundamentals1/Fundamentals1.csproj",
       "projectName": "Fundamentals1",
-      "projectPath": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals1/Fundamentals1.csproj",
+      "projectPath": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Fundamentals1/Fundamentals1.csproj",
       "packagesPath": "/Users/Shea/.nuget/packages/",
-      "outputPath": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals1/obj/",
+      "outputPath": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/Fundamentals1/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

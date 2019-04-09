@@ -1,14 +1,6 @@
 {
-  "ProjectFilePath": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/WizardNinjaSamari/WizardNinjaSamari.csproj",
+  "ProjectFilePath": "/Users/Shea/Desktop/coding_dojo/c#/OOP/WizardNinjaSamari/WizardNinjaSamari.csproj",
   "TargetFramework": "netcoreapp2.1",
   "TagHelpers": [],
-  "Configuration": {
-    "ConfigurationName": "UnsupportedRazor",
-    "LanguageVersion": "1.0",
-    "Extensions": [
-      {
-        "ExtensionName": "UnsupportedRazorExtension"
-      }
-    ]
-  }
+  "Configuration": null
 }

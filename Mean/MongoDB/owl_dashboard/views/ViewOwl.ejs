@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Add Owl</title>
+</head>
+<body class='bg-dark'>
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/owls/new">Add Owl</a>
+        </li>
+    </ul>
+    <div class="jumbotron col-6 container mt-4">
+        <h1 class="display-4 text-center"><%= owl[0].first_Name%> <%= owl[0].last_Name%></h1>
+        <hr class="my-4">
+        <ul>
+            <li><%= owl[0].type%></li>
+        </ul>
+       
+    </div>
+</body>
+</html>

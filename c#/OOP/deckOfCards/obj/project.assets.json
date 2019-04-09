@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/deckOfCards/deckOfCards.csproj",
+      "projectUniqueName": "/Users/Shea/Desktop/coding_dojo/c#/OOP/deckOfCards/deckOfCards.csproj",
       "projectName": "deckOfCards",
-      "projectPath": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/deckOfCards/deckOfCards.csproj",
+      "projectPath": "/Users/Shea/Desktop/coding_dojo/c#/OOP/deckOfCards/deckOfCards.csproj",
       "packagesPath": "/Users/Shea/.nuget/packages/",
-      "outputPath": "/Users/Shea/Desktop/coding_dojo/c#/Fundamentals/deckOfCards/obj/",
+      "outputPath": "/Users/Shea/Desktop/coding_dojo/c#/OOP/deckOfCards/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

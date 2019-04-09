@@ -11581,11 +11581,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Shea/Desktop/BrightIdeas/BrightIdeas.csproj",
+      "projectUniqueName": "/Users/Shea/Desktop/coding_dojo/c#/c#Belt/BrightIdeas/BrightIdeas.csproj",
       "projectName": "BrightIdeas",
-      "projectPath": "/Users/Shea/Desktop/BrightIdeas/BrightIdeas.csproj",
+      "projectPath": "/Users/Shea/Desktop/coding_dojo/c#/c#Belt/BrightIdeas/BrightIdeas.csproj",
       "packagesPath": "/Users/Shea/.nuget/packages/",
-      "outputPath": "/Users/Shea/Desktop/BrightIdeas/obj/",
+      "outputPath": "/Users/Shea/Desktop/coding_dojo/c#/c#Belt/BrightIdeas/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
