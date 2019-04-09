@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Message Board</title>
+</head>
+<body class='bg-dark'>
+    <div class='container-fluid bg-secondary p-2'>
+        <h1 class='text-white text-center'>Dojo Message Board</h1>
+    </div>
+    <div class="container col-8 jumbotron mt-2">
+        <form action="/post" method="POST">
+            <div class="form-group col-6">
+              <label for="creator">Name:</label>
+              <input name='creator' type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="Message">Message:</label>
+              <textarea name='message' class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Post</button>
+        </form>
+    </div>
+    <div class="col-6 offset-2">
+        <% for(var x in Allmessages){%>
+        <% console.log(Allmessages[x]) %>
+            <div class="card bg-primary text-white border border-white mt-2">
+                <div class="card-body bg-info border border-white rounded m-1">
+                  <h5>"<%= Allmessages[x].message %>"</h5>
+                  <p class='offset-8'>- <%= Allmessages[x].creator %></p>
+                </div>
+                <% var j = 0  %>
+                <% while( j < Allmessages[x].comments.length) { %>
+                        <div class="card-body bg-info border border-white rounded m-1">
+                        <h6 class=''>" <%= Allmessages[x].comments[j].comment  %>"</h6>
+                        <p class='offset-8'>-<%= Allmessages[x].comments[j].commenter  %></p>
+                        </div>
+                    <% j++ %>
+                <% } %>
+                <div class='contanier'>
+                    <form action="/comment/<%=Allmessages[x]._id%>" method="POST">
+                        <div class="form-row m-1">
+                            <div class="col-4">
+                                <label for="commenter">Name:</label>
+                                <input name="commenter" type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="form-group col">
+                                    <label for="comment">Comment:</label>
+                                    <textarea name='comment' class="form-control" rows="2" placeholder="Leave a comment"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-outline-light mb-1 ml-2">Comment</button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+
+</body>
+</html>
