@@ -69,27 +69,15 @@ var UserSchema = new mongoose.Schema({
     name: {type: String, require: true, validate: nameValidator},
     quote: {type: String, require: true, validate: quoteVaildator}
    }, {timestamps: true})
-   mongoose.model('User', UserSchema); // We are setting this Schema in our Models as 'User'copy
-   var User = mongoose.model('User') // We are retrieving this Schema from our Models, named 'Us
+
+mongoose.model('User', UserSchema);
+    // We are setting this Schema in our Models as 'User'copy
+const User = mongoose.model('User') // We are retrieving this Schema from our Models, named 'Us
    // Use native promises (only necessary with mongoose versions <= 4)
 
+require('./server/config/routes.js')(app);
 
-app.get('/', function(req, res){
-    res.render('index', {errors: ""});
-})
 
-app.get('/quotes', function(req, res){
-    User.find({}, function(err, quotes){
-        if(err){
-            console.log("something went wrong")
-        }
-        else{
-            console.log('getting quotes')
-            res.render('quotes', {quotes: quotes })
-            console.log(quotes)
-        }
-    }).sort({createdAt: -1})
-})
 
 app.post('/quotes/add', function (req, res){
     console.log("POST DATA", req.body);

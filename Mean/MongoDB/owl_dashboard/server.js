@@ -81,11 +81,110 @@ app.get('/', function(req, res){
             console.log("ERROR", err);
         }
         else{
-            res.render('index');
+            res.render('index', {errors: "", owls: owls});
         }
     });
 })
 
+app.get('/owls/new', function(req, res){
+
+    res.render('NewOwl', {errors: ""});
+})
+
+app.post('/owls', function (req, res){
+    console.log("POST DATA", req.body);
+    var owl = new Owl(req.body);
+    owl.save(function(err){
+        if(err){
+            console.log("We Have An Error", err);
+            var errorArr = [];
+            for(var key in err.errors){
+                console.log(key);
+                console.log(err.errors[key].message)
+                errorArr.push({
+                    field : key, 
+                    error : err.errors[key].message })
+            }
+            console.log(errorArr);
+            res.render('NewOwl', {errors: errorArr });
+
+        }
+        else{
+            res.redirect('/');
+        }
+    })
+
+})
+
+app.get('/owls/:id', function(req, res){
+    var id = req.params.id;
+    Owl.find({_id: id}, function(err, owl){
+        if(err){
+            console.log("ERROR", err);
+        }
+        else{
+
+            res.render('ViewOwl', {owl: owl})
+            console.log(owl);
+        }
+    })
+})
+app.post('/owls/:id', function(req, res){
+    var id = req.params.id;
+    console.log(req.body);
+    Owl.findByIdAndUpdate(id,{
+             $set: {
+                first_Name: req.body.first_Name,
+                last_Name: req.body.last_Name,
+                type: req.body.type
+            }},nameValidator,
+                function(err){
+                if(err){
+                    console.log("ERROR", err);
+                    res.redirect(`/owls/${id}`)
+                }
+                else{
+                    res.redirect('/');
+                    console.log("Succesfully Changed!")
+
+                }
+    })
+})
+
+app.get('/owls/destroy/:id', function(req, res){
+    var id = req.params.id;
+    console.log(id);
+    Owl.remove({_id: id}, function(err){
+        if(err){
+            console.log("ERROR", err);
+        }
+        else{
+            res.redirect("/");
+        }
+    })
+})
+
+app.get('/owls/edit/:id', function(req, res){
+    var id = req.params.id;
+    Owl.find({_id: id}, function(err, owl){
+        if(err){
+            console.log("We Have An Error", err);
+            var errorArr = [];
+            for(var key in err.errors){
+                console.log(key);
+                console.log(err.errors[key].message)
+                errorArr.push({
+                    field : key, 
+                    error : err.errors[key].message })
+            }
+            console.log(errorArr);
+            res.render('EditOwl', {errors: errorArr, owl:owl });
+        }
+        else{
+            res.render('EditOwl', {errors:"", owl: owl})
+        }
+    })
+})
 
 // Setting our Server to Listen on Port: 8000
 app.listen(8000, function() {
