@@ -2,9 +2,7 @@ const mongoose = require('mongoose');
 const Task = mongoose.model('Task');
 
 module.exports = {
-    redirect: (req, res)=>{
-        res.redirect('/tasks')
-    },
+
     index: (req, res)=>{
         Task.find({}, (err, tasks)=>{
             if(err){
@@ -25,7 +23,7 @@ module.exports = {
                 res.json({success: false, error: err})
             }
             else{
-                res.redirect('/')
+                res.json({success: true})
             }
         })
     },
@@ -51,20 +49,21 @@ module.exports = {
                 res.json({success: false, error: err})
             }
             else{
-                res.redirect('/');
+                res.json({success: true});
             }
         })
     },
 
     delete: (req, res)=>{
         console.log(req.method);
+        console.log("MADE IT TO SERVER", req.params)
         let id = req.params.id;
         Task.findByIdAndDelete(id, (err)=>{
             if(err){
                 res.json({success: false, error: err})
             }
             else{
-                res.redirect('/');
+                res.json({success: true});
             }
         })
     }
