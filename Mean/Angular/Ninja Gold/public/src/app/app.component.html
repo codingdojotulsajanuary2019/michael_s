@@ -1,0 +1,63 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="text-white text-center container">
+  <h1 class="text-white">
+    Welcome To {{ title }}!
+  </h1>
+  <h4 *ngIf="status == true">{{ name }}'s Score: {{ score }}</h4>
+  <h4 *ngIf="status == false">Pleasse Enter Your Name</h4>
+</div>
+    
+<div *ngIf="status == false" class="text-white container col-6">
+    <label for="name">Name: </label>
+    <input (keyup)="player($event)" type="text" class="form-control"  placeholder="Enter Name">
+    <button (click)="ready()" type="button" class="btn btn-primary mt-2 offset-5">Start Game</button>
+
+</div>
+<div *ngIf="status == true" class="container mt-4 text-center">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 14rem;">
+        <img class="card-img-top" src="assets/img/farm.jpg" alt="Card image cap" style="height: 150; width: 100%">
+        <div class="card-body">
+          <h5 class="card-title">Farm</h5>
+          <p class="card-text">(earns 10-20 gold)</p>
+          <button (click)="update('farm')" type="button" class="btn btn-primary mt-2 offset-5">Start Game</button>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 14rem;">
+          <img class="card-img-top" src="assets/img/cave.jpg" alt="Card image cap" style="height: 150px; width: 100%;">
+          <div class="card-body">
+            <h5 class="card-title">Cave</h5>
+            <p class="card-text">(earns 5-10 gold)</p>
+            <button (click)="update('cave')" type="button" class="btn btn-primary mt-2 offset-5">Start Game</button>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card" style="width: 14rem;">
+            <img class="card-img-top" src="assets/img/house.jpg" alt="Card image cap" style="height: 150px; width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">House</h5>
+              <p class="card-text">(earns 2-5 gold)</p>
+              <button (click)="update('house')" type="button" class="btn btn-primary mt-2 offset-5">Start Game</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 14rem;">
+              <img class="card-img-top" src="assets/img/casino.jpg" alt="Card image cap" style="height: 150px; width: 100%;">
+              <div class="card-body">
+                <h5 class="card-title">Casino</h5>
+                <p class="card-text">(earns/takes 0-50 gold)</p>
+                <button (click)="update('casino')" type="button" class="btn btn-primary mt-2 offset-5">Start Game</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

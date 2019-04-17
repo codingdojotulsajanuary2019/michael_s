@@ -1,0 +1,14 @@
+<div class=" mt-4">
+  <!-- <p class="text-dark">{{ cakeToRate | json}}</p> -->
+    <form (submit)="rateCake()" class="ml-5">
+        <div class="form-group text-dark">
+          <label for="baker">Rating:</label>
+          <input type="number" name="cakeToRate.stars" [(ngModel)]="cakeToRate.stars" class="form-control col-4">
+        </div>
+        <div class="form-group text-dark">
+          <label for="image">Comment:</label>
+          <input type="text" name="cakeToRate.comment" [(ngModel)]="cakeToRate.comment" class="form-control" placeholder="Comment">
+        </div>
+        <button type="submit" value="Rate Cake" class="btn btn-primary">submit</button>
+    </form>
+</div>

@@ -1,0 +1,25 @@
+<div class="jumbotron mt-4">
+    <h3 class="display-4 text-dark text-center">Rate A Cake</h3>
+    <hr class="my-4">
+    <div class="overflow">
+      <div *ngFor="let cake of showCakes['cakes']" class="card">
+          <div class="card-body text-dark row">
+              <div class="card" style="width: 12rem;">
+                  <img (click)="showCake(cake)" class="card-img-top" src="{{ cake.image}}" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ cake.baker }}</h5>
+                    <p class="card-text">Rating</p>
+                    <a (click)="showRateCake(cake)"  class="btn btn-primary">Rate Cake</a>
+                  </div>
+              </div>
+              <div *ngIf="showThisCake">
+                <app-show-cake *ngIf="showThisCake._id == cake._id" [displayCake]="showThisCake"></app-show-cake>
+              </div>
+              <div *ngIf="rateThisCake">
+                <app-rate-cake *ngIf="rateThisCake._id == cake._id" [cakeToRate]="rateThisCake"></app-rate-cake>
+              </div>
+          </div>
+        </div>
+    </div>
+
+</div>

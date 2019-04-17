@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amadon</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="container bg-dark text-white text-center mt-5 border border-white rounded pt-5 pb-5 col-4">
+    <h3>Thank you for your business!</h3>
+    <p>We charged your credit card for ${{total_charge}}</p>
+    <p>You have ordered #{{request.session.quantity}} items so far and spent ${{request.session.total_spent}} with Amadon.com!</p>
+    <p><a href="/">Go Back</a></p>
+</body>
+</html>

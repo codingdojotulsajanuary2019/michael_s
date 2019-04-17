@@ -1,0 +1,17 @@
+<div class="jumbotron col-10 mt-4">
+    <h1 class="display-4 text-dark text-center">Add A Cake</h1>
+    <hr class="my-4">
+    <form (submit)="createCake()">
+        <div class="form-group text-dark">
+          <label for="baker">Baker:</label>
+          <input type="text" name="newCake.baker" [(ngModel)]="addCake.baker" class="form-control" placeholder="Bakers Name">
+        </div>
+        <div class="form-group text-dark">
+          <label for="image">Image:</label>
+          <input type="text" name="newCake.image" [(ngModel)]="addCake.image" class="form-control" placeholder="Image Url">
+        </div>
+        <button type="submit" value="Add Cake" class="btn btn-primary">Add Cake</button>
+    </form>
+</div>
+
+

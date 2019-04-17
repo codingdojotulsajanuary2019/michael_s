@@ -1,0 +1,63 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div  class="container-fluid bg-info" style="text-align:center">
+  <h1 class="text-white">{{ title }} </h1>
+</div>
+<div class = "mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+              <h1 class="text-white">ADD A TASK</h1>
+              <form (submit)="addTask()" class="text-white">
+              <p class="text-white">{{ newTask | json }} </p>
+                  <div class="form-group">
+                    <label for="title">Tile</label>
+                    <input type="text" name="newTask.title" [(ngModel)]="newTask.title" class="form-control" placeholder="Title">
+                  </div>
+                  <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" name="newTask.description" [(ngModel)]="newTask.description" class="form-control" placeholder="Description">
+                  </div>
+                  <button type="submit" value="Create Task" class="btn btn-primary">Add Tasks</button>
+              </form>
+          </div>
+      <div class="col">
+          <app-task *ngIf="selectedTask" [showTask] = "selectedTask"></app-task>
+      </div>
+</div>
+
+  <h1 class = "text-white mt-5 ml-4">ALL TASKS</h1>
+
+  <div *ngFor = "let task of tasks" class="card mt-2 ml-4 col-5">
+      <div class="card-body col-12">
+            <div class="row">
+              <div class="col-12">
+                <h3>{{ task.title  }}</h3>
+                <button (click)="showTask(task)" type="button" class="btn btn-primary ml-1">Show</button>
+                <button (click)="deleteTask({id: task._id})" type="button" class="btn btn-primary ml-1">Delete</button>
+                <button (click)="showEditTask(task)" type="button" class="btn btn-primary ml-1">Edit</button>
+              </div>
+              <div class="col-12 mt-2"*ngIf = "editTask._id === task._id" >
+                  <h3>Edit Task</h3>
+                  <form (submit)="updateTask()" class="mt-2">
+                        <div class="form-group">
+                          <label for="title">Title:</label>
+                          <input type="text" name="editTask.title" [(ngModel)]="editTask.title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="description">Description:</label>
+                          <input type="text" name="editTask.description" [(ngModel)]="editTask.description" class="form-control">
+                        </div>
+                        <button type="submit" value="Update Task" class="btn btn-primary">Submit</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+</div>
+
+
+
+
+
+<router-outlet></router-outlet>

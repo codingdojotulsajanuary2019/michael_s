@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="text-center bg-info pt-2 pb-2">
+  <h1>Welcome To Rate My Cake!</h1>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+          <app-add-cake [addCake]="newCake"></app-add-cake>
+        </div>
+        <div class="col">
+          <app-show-cakes [showCakes]="allCakes"></app-show-cakes>
+        </div>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>
