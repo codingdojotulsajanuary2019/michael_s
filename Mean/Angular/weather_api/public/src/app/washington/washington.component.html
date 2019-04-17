@@ -1,0 +1,11 @@
+<div *ngIf="weather" class="jumbotron container">
+    <h1 class="display-4 text-center">Washington D.C. Weather</h1>
+    <hr class="my-4">
+    <div class="text-center">
+      <img id="icon" src="http://openweathermap.org/img/w/{{iconCode}}.png" alt="">
+      <h3>Forecast: {{ weather['weather'][0]['description']  }}</h3>
+      <h3>Temp: {{ temp }} &deg;F </h3>
+      <h3>High: {{ high  }} &deg;F</h3>
+      <h3>Low: {{ low  }} &deg;F </h3>
+    </div>
+</div>
