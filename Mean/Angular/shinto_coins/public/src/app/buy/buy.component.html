@@ -1,0 +1,14 @@
+<div class="jumbotron">
+    <h1 class="display-4">Buy 2SHEA Coins</h1>
+    <hr class="my-4">
+    <h3>Current 2SHEA Coin Value: ${{currentInfo['value']}}</h3>
+    <h3>Number of 2SHEA Coins Owned: {{currentInfo['coins']}}</h3>
+    <form class="form-inline-block mt-5">
+        <div class="form-group mb-2">
+          {{amount | json}}
+          <label for="amount">Amount of Coins</label>
+          <input name="amount" [(ngModel)]="amount" type="number" class="form-control col-1" value="">
+        </div>
+        <button (click)="buyCoins()" type="submit" class="btn btn-primary mb-2">Buy</button>
+      </form>
+</div>

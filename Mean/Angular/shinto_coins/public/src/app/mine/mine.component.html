@@ -1,0 +1,22 @@
+<div class="jumbotron">
+    <h1 class="display-4">Mine 2SHEA COINS</h1>
+    <p class="lead">Here you can mine ShintoCoins by answering questions correctly</p>
+    <hr class="my-4">
+    <div *ngIf="question">
+      <h4>Question:</h4>
+      <h3 >{{ question['question'] }}</h3>
+    </div>
+    {{selectedAnswer | json}}
+    <form *ngIf="inncorrectAnswers">
+        <div class="form-group col-6">
+          <label for="exampleFormControlSelect2">Select Answer:</label>
+          <select name="selectedAnswer" [(ngModel)]="selectedAnswer" multiple class="form-control" >
+            <option >{{ inncorrectAnswers[1] }}</option>
+            <option >{{ correctAnswer  }}</option>
+            <option >{{ inncorrectAnswers[0]  }}</option>
+            <option >{{ inncorrectAnswers[2]  }}</option>
+          </select>
+        </div>
+        <button (click)="submitAnswer(selectedAnswer)" type="submit" class="btn btn-primary ml-3">Mine</button>
+    </form>
+  </div>

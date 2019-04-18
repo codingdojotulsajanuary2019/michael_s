@@ -1,0 +1,23 @@
+<div class="jumbotron">
+    <h1 class="display-4">Your 2SHEA Coin Ledger</h1>
+    <p class="lead">Here you can browse all 2SHEA Coin transactions</p>
+    <hr class="my-4">
+    <table class="table text-center" *ngIf="ledger">
+        <thead>
+          <tr>
+            <th scope="col">Action</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Value</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let entry of ledger">
+            <th>{{entry['action']}}</th>
+            <td>{{entry['amount']}}</td>
+            <td>{{entry['value']}}</td>
+            <td><button [routerLink]="['/transaction' , entry['transaction_id']]" type="button" class="btn btn-primary">details</button></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
