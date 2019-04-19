@@ -1,0 +1,20 @@
+<div *ngIf="allAuthors" class="container text-center mt-5">
+  <h1>ALL AUTHORS</h1>
+  <table class="table table-striped col-8 container text-center border border-dark">
+      <thead>
+        <tr>
+          <th scope="col"><h3>Author</h3></th>
+          <th scope="col"><h3>Actions Available</h3></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let author of allAuthors">
+          <td class="text-primary"> {{ author['name'] }}  </td>
+          <td>
+            <button [routerLink]="['/edit', author['_id']]" type="button" class="btn btn-secondary act-btn ">Edit</button>
+            <button (click)="deleteAuthor(author['_id'])" type="button" class="btn btn-secondary ml-2 act-btn ">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

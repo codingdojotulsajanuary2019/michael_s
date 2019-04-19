@@ -1,0 +1,16 @@
+<div class="jumbotron text-center">
+    <h1 class="display-4">Add An Author</h1>
+    <hr class="my-4">
+    <form class="offset-4">
+        <div class="form-row">
+          <div class="col-5">
+            <label class="sr-only" for="newAuthor">Name:</label>
+            <input name="newAuthor" [(ngModel)]="newAuthor" type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+            <div *ngIf="errors['name']" class="text-danger">{{errors['name']}}</div>
+          </div>
+          <div class="col-auto">
+            <button (click)="createAuthor()" type="submit" class="btn btn-primary mb-2">Submit</button>
+          </div>
+        </div>
+      </form>
+  </div>
